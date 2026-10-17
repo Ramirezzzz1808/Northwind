@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="NorthWind.Membership.Backend.AspNetIdentity/NorthWind.Membership.Backend.AspNetIdentity.csproj" Id="ea5710b9-418a-4358-9861-1ce816ffb5b0" />
+  <Project Path="NorthWind.Membership.Backend.Core/NorthWind.Membership.Backend.Core.csproj" Id="a436e027-d0d9-4e05-a217-2d8d012afd72" />
+  <Project Path="NorthWind.Membership.Entities/NorthWind.Membership.Entities.csproj" Id="65d1d469-d490-4a90-9f67-147b9acf3df8" />
+  <Project Path="NorthWind.Membership.Frontend.RazorViews/NorthWind.Membership.Frontend.RazorViews.csproj" Id="269c78fb-0742-466a-8570-cba21cde7d56" />
+</Solution>

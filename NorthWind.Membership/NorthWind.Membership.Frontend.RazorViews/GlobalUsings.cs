@@ -1,0 +1,9 @@
+﻿global using Microsoft.AspNetCore.Components;
+global using Microsoft.Extensions.DependencyInjection;
+global using NorthWind.HttpDelegatingHandlers;
+global using NorthWind.Membership.Entities.Dtos.UserRegistration;
+global using NorthWind.RazorComponents.Validators;
+global using NorthWind.Validation.Entities.Interfaces;
+global using NorthWind.Validation.Entities.ValueObjects;
+global using NorthWind.Membership.Entities.Dtos.UserLogin;
+global using NorthWind.Membership.Frontend.RazorViews.ViewModels.UserLogin;

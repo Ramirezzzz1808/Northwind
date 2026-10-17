@@ -1,0 +1,16 @@
+﻿global using Microsoft.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore.Metadata.Builders;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.Extensions.Options;
+global using NorthWind.Sales.Backend.BusinessObjects.Aggregates;
+global using NorthWind.Sales.Backend.BusinessObjects.POCOEntities;
+global using NorthWind.Sales.Backend.Repositories.Interfaces;
+global using NorthWind.Sales.Backend.DataContexts.EFCore.Configurations;
+global using NorthWind.Sales.Backend.DataContexts.EFCore.DataContexts;
+global using NorthWind.Sales.Backend.DataContexts.EFCore.Options;
+global using NorthWind.Sales.Backend.DataContexts.EFCore.Services;
+global using System.Reflection;
+global using NorthWind.Exceptions.Entities.Exceptions;
+global using NorthWind.Sales.Backend.DataContexts.EFCore.Guards;
+global using Microsoft.EntityFrameworkCore.Design;
+global using NorthWind.Sales.Backend.Repositories.Entities;

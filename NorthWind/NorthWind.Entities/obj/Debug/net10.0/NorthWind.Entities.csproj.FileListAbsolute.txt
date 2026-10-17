@@ -1,0 +1,12 @@
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Entities\bin\Debug\net10.0\NorthWind.Entities.deps.json
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Entities\bin\Debug\net10.0\NorthWind.Entities.dll
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Entities\bin\Debug\net10.0\NorthWind.Entities.pdb
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Entities\obj\Debug\net10.0\NorthWind.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Entities\obj\Debug\net10.0\NorthWind.Entities.AssemblyInfoInputs.cache
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Entities\obj\Debug\net10.0\NorthWind.Entities.AssemblyInfo.cs
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Entities\obj\Debug\net10.0\NorthWind.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Entities\obj\Debug\net10.0\NorthWind.Entities.dll
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Entities\obj\Debug\net10.0\refint\NorthWind.Entities.dll
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Entities\obj\Debug\net10.0\NorthWind.Entities.pdb
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Entities\obj\Debug\net10.0\ref\NorthWind.Entities.dll
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Entities\obj\Debug\net10.0\NorthWin.D9FE0B03.Up2Date

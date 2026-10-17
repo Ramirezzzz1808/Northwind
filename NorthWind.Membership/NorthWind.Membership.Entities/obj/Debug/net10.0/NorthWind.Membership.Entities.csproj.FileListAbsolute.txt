@@ -1,0 +1,16 @@
+C:\Users\Antonio\source\repos\NorthWind.Membership\NorthWind.Membership.Entities\bin\Debug\net10.0\NorthWind.Membership.Entities.deps.json
+C:\Users\Antonio\source\repos\NorthWind.Membership\NorthWind.Membership.Entities\bin\Debug\net10.0\NorthWind.Membership.Entities.dll
+C:\Users\Antonio\source\repos\NorthWind.Membership\NorthWind.Membership.Entities\bin\Debug\net10.0\NorthWind.Membership.Entities.pdb
+C:\Users\Antonio\source\repos\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net10.0\NorthWind.Membership.Entities.csproj.AssemblyReference.cache
+C:\Users\Antonio\source\repos\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net10.0\NorthWind.Membership.Entities.Resources.UserRegistrationMessages.resources
+C:\Users\Antonio\source\repos\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net10.0\NorthWind.Membership.Entities.csproj.GenerateResource.cache
+C:\Users\Antonio\source\repos\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net10.0\NorthWind.Membership.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Antonio\source\repos\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net10.0\NorthWind.Membership.Entities.AssemblyInfoInputs.cache
+C:\Users\Antonio\source\repos\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net10.0\NorthWind.Membership.Entities.AssemblyInfo.cs
+C:\Users\Antonio\source\repos\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net10.0\NorthWind.Membership.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Antonio\source\repos\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net10.0\NorthWind.Membership.Entities.dll
+C:\Users\Antonio\source\repos\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net10.0\refint\NorthWind.Membership.Entities.dll
+C:\Users\Antonio\source\repos\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net10.0\NorthWind.Membership.Entities.pdb
+C:\Users\Antonio\source\repos\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net10.0\ref\NorthWind.Membership.Entities.dll
+C:\Users\Antonio\source\repos\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net10.0\NorthWin.3D16B29D.Up2Date
+C:\Users\Antonio\source\repos\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net10.0\NorthWind.Membership.Entities.Resources.UserLoginMessages.resources

@@ -1,0 +1,17 @@
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net10.0\NorthWind.Exceptions.Entities.deps.json
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net10.0\NorthWind.Exceptions.Entities.dll
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net10.0\NorthWind.Exceptions.Entities.pdb
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net10.0\NorthWind.Validation.Entities.dll
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net10.0\NorthWind.Validation.Entities.pdb
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net10.0\NorthWind.Exceptions.Entities.csproj.AssemblyReference.cache
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net10.0\NorthWind.Exceptions.Entities.Resources.ExceptionMessages.resources
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net10.0\NorthWind.Exceptions.Entities.csproj.GenerateResource.cache
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net10.0\NorthWind.Exceptions.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net10.0\NorthWind.Exceptions.Entities.AssemblyInfoInputs.cache
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net10.0\NorthWind.Exceptions.Entities.AssemblyInfo.cs
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net10.0\NorthWind.Exceptions.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net10.0\NorthWin.65329DA7.Up2Date
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net10.0\NorthWind.Exceptions.Entities.dll
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net10.0\refint\NorthWind.Exceptions.Entities.dll
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net10.0\NorthWind.Exceptions.Entities.pdb
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net10.0\ref\NorthWind.Exceptions.Entities.dll

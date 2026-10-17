@@ -1,0 +1,27 @@
+﻿@inherits NavMenuLayout
+
+<SectionContent SectionId="NavBarBrandSection">
+    <a class="navbar-brand" href="">@CommonMessages.NavBarBrandTitle</a>
+</SectionContent>
+
+<SectionContent SectionId="NavBarItemsSection">
+    <NavMenuItem HRef="" Match="NavLinkMatch.All">
+        <!-- ... ícono casa ... -->
+        @CommonMessages.HomeMenuItemTitle
+    </NavMenuItem>
+
+    <AuthorizeView>
+        <Authorized>
+            <NavMenuItem HRef="CreateOrder">
+                <!-- ... ícono card-checklist ... -->
+                @CreateOrderMessages.CreateOrderMenuItemTitle
+            </NavMenuItem>
+        </Authorized>
+    </AuthorizeView>
+</SectionContent>
+
+<SectionContent SectionId="HeaderSection">
+    <LoginDisplayComponent />
+</SectionContent>
+
+@((RenderFragment)(builder => base.BuildRenderTree(builder)))

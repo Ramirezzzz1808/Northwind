@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Az7um8xcqLg=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Antonio\\source\\repos\\NorthWind\\NorthWind.Sales.Backend.BusinessObjects\\NorthWind.Sales.Backend.BusinessObjects.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Antonio\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.12\\microsoft.extensions.dependencyinjection.abstractions.10.0.12.nupkg.sha512",
+    "C:\\Users\\Antonio\\.nuget\\packages\\northwind.validation.entities\\1.0.0\\northwind.validation.entities.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

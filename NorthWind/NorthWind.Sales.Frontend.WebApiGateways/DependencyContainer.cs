@@ -1,0 +1,25 @@
+﻿using NorthWind.HttpDelegatingHandlers;
+using NorthWind.Sales.Frontend.WebApiGateways;
+using System.Net.Http;
+
+namespace Microsoft.Extensions.DependencyInjection;
+
+public static class DependencyContainer
+{
+    public static IServiceCollection AddWebApiGateways(
+        this IServiceCollection services,
+        Action<HttpClient> configureHttpClient,
+        Action<IHttpClientBuilder> configureHttpClientBuilder)
+    {
+        services.AddExceptionDelegatingHandler();
+
+        var Builder = services
+            .AddHttpClient<ICreateOrderGateway, CreateOrderGateway>(
+                configureHttpClient)
+            .AddHttpMessageHandler<ExceptionDelegatingHandler>();
+
+        configureHttpClientBuilder(Builder);
+
+        return services;
+    }
+}

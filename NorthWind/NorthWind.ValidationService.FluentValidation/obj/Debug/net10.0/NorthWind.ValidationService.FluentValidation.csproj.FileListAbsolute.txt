@@ -1,0 +1,15 @@
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net10.0\NorthWind.ValidationService.FluentValidation.csproj.AssemblyReference.cache
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net10.0\NorthWind.ValidationService.FluentValidation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net10.0\NorthWind.ValidationService.FluentValidation.AssemblyInfoInputs.cache
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net10.0\NorthWind.ValidationService.FluentValidation.AssemblyInfo.cs
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net10.0\NorthWind.ValidationService.FluentValidation.csproj.CoreCompileInputs.cache
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net10.0\NorthWind.ValidationService.FluentValidation.deps.json
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net10.0\NorthWind.ValidationService.FluentValidation.dll
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net10.0\NorthWind.ValidationService.FluentValidation.pdb
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net10.0\NorthWind.Validation.Entities.dll
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net10.0\NorthWind.Validation.Entities.pdb
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net10.0\NorthWin.B536FC6D.Up2Date
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net10.0\NorthWind.ValidationService.FluentValidation.dll
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net10.0\refint\NorthWind.ValidationService.FluentValidation.dll
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net10.0\NorthWind.ValidationService.FluentValidation.pdb
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net10.0\ref\NorthWind.ValidationService.FluentValidation.dll
