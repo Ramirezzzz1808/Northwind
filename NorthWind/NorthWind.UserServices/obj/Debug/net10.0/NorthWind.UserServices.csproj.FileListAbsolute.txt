@@ -8,9 +8,9 @@ C:\Users\Antonio\source\repos\NorthWind\NorthWind.UserServices\obj\Debug\net10.0
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.UserServices\obj\Debug\net10.0\NorthWind.UserServices.AssemblyInfoInputs.cache
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.UserServices\obj\Debug\net10.0\NorthWind.UserServices.AssemblyInfo.cs
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.UserServices\obj\Debug\net10.0\NorthWind.UserServices.csproj.CoreCompileInputs.cache
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.UserServices\obj\Debug\net10.0\NorthWind.UserServices.sourcelink.json
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.UserServices\obj\Debug\net10.0\NorthWin.B98BC945.Up2Date
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.UserServices\obj\Debug\net10.0\NorthWind.UserServices.dll
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.UserServices\obj\Debug\net10.0\refint\NorthWind.UserServices.dll
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.UserServices\obj\Debug\net10.0\NorthWind.UserServices.pdb
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.UserServices\obj\Debug\net10.0\ref\NorthWind.UserServices.dll
-C:\Users\Antonio\source\repos\NorthWind\NorthWind.UserServices\obj\Debug\net10.0\NorthWind.UserServices.sourcelink.json

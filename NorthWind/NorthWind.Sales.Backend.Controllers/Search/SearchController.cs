@@ -1,4 +1,6 @@
+using Microsoft.AspNetCore.Http;
 using NorthWind.Sales.Backend.BusinessObjects.Interfaces.Search;
+using NorthWind.Sales.Entities.Dtos.Invoice;
 using NorthWind.Sales.Entities.Dtos.Search;
 using NorthWind.Sales.Entities.ValueObjects;
 
@@ -13,6 +15,12 @@ public static class SearchController
             .RequireAuthorization();
 
         app.MapGet(Endpoints.SearchProducts, SearchProducts)
+            .RequireAuthorization();
+
+        app.MapGet(Endpoints.SearchOrders, SearchOrders)
+            .RequireAuthorization();
+
+        app.MapGet(Endpoints.GetInvoice, GetInvoice)
             .RequireAuthorization();
 
         return app;
@@ -31,4 +39,22 @@ public static class SearchController
         int page = 1,
         int pageSize = 10) =>
         await inputPort.Handle(text ?? "", page, pageSize);
+
+    public static async Task<PagedResultDto<OrderSearchItemDto>> SearchOrders(
+        ISearchOrdersInputPort inputPort,
+        string? text = null,
+        int page = 1,
+        int pageSize = 10) =>
+        await inputPort.Handle(text ?? "", page, pageSize);
+
+    public static async Task<IResult> GetInvoice(
+        IGetInvoiceInputPort inputPort,
+        int id)
+    {
+        var Invoice = await inputPort.Handle(id);
+
+        return Invoice == null
+            ? Results.NotFound($"La factura #{id} no existe.")
+            : Results.Ok(Invoice);
+    }
 }

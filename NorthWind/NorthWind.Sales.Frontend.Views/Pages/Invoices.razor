@@ -1,0 +1,161 @@
+@page "/invoices"
+@page "/invoices/{OrderId:int}"
+@attribute [Authorize]
+@using Microsoft.JSInterop
+@using NorthWind.Sales.Entities.Dtos.Invoice
+@using NorthWind.Sales.Frontend.Views.ViewModels.Invoices
+@inject InvoiceViewModel ViewModel
+@inject IJSRuntime JS
+
+<PageTitle>@InvoiceMessages.PageTitle</PageTitle>
+
+<style>
+    @@media print {
+        .no-print, nav, header, aside, .navbar, .sidebar { display: none !important; }
+        .invoice-sheet { border: none !important; box-shadow: none !important; }
+    }
+</style>
+
+<div class="d-flex gap-2 mb-3 no-print">
+    <button type="button" class="btn btn-primary" @onclick="OpenSearch">
+        @InvoiceMessages.SearchInvoiceButton
+    </button>
+    @if (ViewModel.Invoice != null)
+    {
+        <button type="button" class="btn btn-outline-secondary" @onclick="PrintInvoice">
+            @InvoiceMessages.PrintButton
+        </button>
+    }
+    <a class="btn btn-outline-success" href="createorder">
+        @InvoiceMessages.NewSaleButton
+    </a>
+</div>
+
+@if (ViewModel.IsLoading)
+{
+    <p class="text-muted">@InvoiceMessages.Loading</p>
+}
+else if (!string.IsNullOrWhiteSpace(ViewModel.ErrorMessage))
+{
+    <div class="alert alert-danger" role="alert">@ViewModel.ErrorMessage</div>
+}
+else if (ViewModel.Invoice == null)
+{
+    <p class="text-muted">@InvoiceMessages.EmptyState</p>
+}
+else
+{
+    var Invoice = ViewModel.Invoice;
+
+    <div class="invoice-sheet card p-4">
+        <div class="d-flex justify-content-between align-items-start mb-4">
+            <h3 class="mb-0">@InvoiceMessages.InvoiceNumberLabel @Invoice.Id.ToString("D8")</h3>
+            <div class="text-end">
+                <div class="text-muted">@InvoiceMessages.DateLabel</div>
+                <div>@Invoice.OrderDate.ToString("dd/MM/yyyy HH:mm")</div>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <div><strong>@InvoiceMessages.CustomerLabel:</strong> @Invoice.CustomerName</div>
+                <div><strong>@InvoiceMessages.IdentificationLabel:</strong> @Invoice.Identification</div>
+                <div><strong>@InvoiceMessages.EmailLabel:</strong> @Invoice.Email</div>
+            </div>
+            <div class="col-md-6">
+                <div><strong>@InvoiceMessages.ShippingLabel:</strong></div>
+                <div>@Invoice.ShipAddress</div>
+                <div>@Invoice.ShipCity, @Invoice.ShipCountry @Invoice.ShipPostalCode</div>
+            </div>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>@InvoiceMessages.ProductLabel</th>
+                    <th class="text-end">@InvoiceMessages.UnitPriceLabel</th>
+                    <th class="text-end">@InvoiceMessages.QuantityLabel</th>
+                    <th class="text-end">@InvoiceMessages.LineTotalLabel</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var Line in Invoice.Lines)
+                {
+                    <tr>
+                        <td>@Line.ProductName</td>
+                        <td class="text-end">@Line.UnitPrice.ToString("N2")</td>
+                        <td class="text-end">@Line.Quantity</td>
+                        <td class="text-end">@Line.LineTotal.ToString("N2")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <div class="row justify-content-end">
+            <div class="col-md-5">
+                <table class="table table-sm">
+                    <tr>
+                        <th>@InvoiceMessages.SubtotalLabel</th>
+                        <td class="text-end">@Invoice.Subtotal.ToString("N2")</td>
+                    </tr>
+                    <tr>
+                        <th>@InvoiceMessages.TaxLabel</th>
+                        <td class="text-end">@Invoice.TaxAmount.ToString("N2")</td>
+                    </tr>
+                    <tr class="table-active">
+                        <th>@InvoiceMessages.TotalLabel</th>
+                        <td class="text-end fw-bold">@Invoice.Total.ToString("N2")</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+}
+
+@if (ShowSearch)
+{
+    <SearchModal TItem="OrderSearchItemDto"
+                 Title="@InvoiceMessages.SearchInvoiceTitle"
+                 Search="ViewModel.SearchOrders"
+                 OnSelected="OrderSelected"
+                 OnClose="CloseSearch">
+        <HeaderTemplate>
+            <th>@InvoiceMessages.InvoiceNumberLabel</th>
+            <th>@InvoiceMessages.DateLabel</th>
+            <th>@InvoiceMessages.CustomerLabel</th>
+            <th class="text-end">@InvoiceMessages.TotalLabel</th>
+        </HeaderTemplate>
+        <RowTemplate Context="Order">
+            <td>@Order.Id.ToString("D8")</td>
+            <td>@Order.OrderDate.ToString("dd/MM/yyyy")</td>
+            <td>@Order.CustomerName (@Order.Identification)</td>
+            <td class="text-end">@Order.Total.ToString("N2")</td>
+        </RowTemplate>
+    </SearchModal>
+}
+
+@code {
+    [Parameter]
+    public int? OrderId { get; set; }
+
+    bool ShowSearch;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (OrderId.HasValue)
+        {
+            await ViewModel.LoadInvoice(OrderId.Value);
+        }
+    }
+
+    void OpenSearch() => ShowSearch = true;
+    void CloseSearch() => ShowSearch = false;
+
+    async Task OrderSelected(OrderSearchItemDto order)
+    {
+        ShowSearch = false;
+        await ViewModel.LoadInvoice(order.Id);
+    }
+
+    async Task PrintInvoice() => await JS.InvokeVoidAsync("print");
+}

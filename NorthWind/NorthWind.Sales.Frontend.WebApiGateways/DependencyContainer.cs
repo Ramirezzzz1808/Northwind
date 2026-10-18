@@ -1,4 +1,4 @@
-﻿using NorthWind.HttpDelegatingHandlers;
+using NorthWind.HttpDelegatingHandlers;
 using NorthWind.Sales.Frontend.WebApiGateways;
 using System.Net.Http;
 
@@ -19,6 +19,13 @@ public static class DependencyContainer
             .AddHttpMessageHandler<ExceptionDelegatingHandler>();
 
         configureHttpClientBuilder(Builder);
+
+        var SearchBuilder = services
+            .AddHttpClient<ISearchGateway, SearchGateway>(
+                configureHttpClient)
+            .AddHttpMessageHandler<ExceptionDelegatingHandler>();
+
+        configureHttpClientBuilder(SearchBuilder);
 
         return services;
     }

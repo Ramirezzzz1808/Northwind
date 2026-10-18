@@ -3,6 +3,8 @@ C:\Users\Antonio\source\repos\NorthWind\NorthWind.RazorComponents\bin\Debug\net1
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.RazorComponents\bin\Debug\net10.0\NorthWind.RazorComponents.deps.json
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.RazorComponents\bin\Debug\net10.0\NorthWind.RazorComponents.dll
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.RazorComponents\bin\Debug\net10.0\NorthWind.RazorComponents.pdb
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.RazorComponents\bin\Debug\net10.0\NorthWind.Validation.Entities.dll
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.RazorComponents\bin\Debug\net10.0\NorthWind.Validation.Entities.pdb
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.RazorComponents\obj\Debug\net10.0\EmbeddedAttribute.cs
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.RazorComponents\obj\Debug\net10.0\ValidatableTypeAttribute.cs
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.RazorComponents\obj\Debug\net10.0\NorthWind.RazorComponents.csproj.AssemblyReference.cache
@@ -11,6 +13,7 @@ C:\Users\Antonio\source\repos\NorthWind\NorthWind.RazorComponents\obj\Debug\net1
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.RazorComponents\obj\Debug\net10.0\NorthWind.RazorComponents.AssemblyInfoInputs.cache
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.RazorComponents\obj\Debug\net10.0\NorthWind.RazorComponents.AssemblyInfo.cs
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.RazorComponents\obj\Debug\net10.0\NorthWind.RazorComponents.csproj.CoreCompileInputs.cache
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.RazorComponents\obj\Debug\net10.0\NorthWind.RazorComponents.sourcelink.json
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.RazorComponents\obj\Debug\net10.0\rjimswa.dswa.cache.json
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.RazorComponents\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.RazorComponents\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
@@ -34,11 +37,8 @@ C:\Users\Antonio\source\repos\NorthWind\NorthWind.RazorComponents\obj\Debug\net1
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.RazorComponents\obj\Debug\net10.0\staticwebassets\msbuild.buildTransitive.NorthWind.RazorComponents.props
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.RazorComponents\obj\Debug\net10.0\staticwebassets.pack.json
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.RazorComponents\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.RazorComponents\obj\Debug\net10.0\NorthWin.412EB7B9.Up2Date
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.RazorComponents\obj\Debug\net10.0\NorthWind.RazorComponents.dll
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.RazorComponents\obj\Debug\net10.0\refint\NorthWind.RazorComponents.dll
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.RazorComponents\obj\Debug\net10.0\NorthWind.RazorComponents.pdb
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.RazorComponents\obj\Debug\net10.0\ref\NorthWind.RazorComponents.dll
-C:\Users\Antonio\source\repos\NorthWind\NorthWind.RazorComponents\obj\Debug\net10.0\NorthWin.412EB7B9.Up2Date
-C:\Users\Antonio\source\repos\NorthWind\NorthWind.RazorComponents\bin\Debug\net10.0\NorthWind.Validation.Entities.dll
-C:\Users\Antonio\source\repos\NorthWind\NorthWind.RazorComponents\bin\Debug\net10.0\NorthWind.Validation.Entities.pdb
-C:\Users\Antonio\source\repos\NorthWind\NorthWind.RazorComponents\obj\Debug\net10.0\NorthWind.RazorComponents.sourcelink.json

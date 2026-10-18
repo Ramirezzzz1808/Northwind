@@ -1,4 +1,5 @@
 using NorthWind.Sales.Backend.BusinessObjects.Interfaces.Search;
+using NorthWind.Sales.Entities.Dtos.Invoice;
 using NorthWind.Sales.Entities.Dtos.Search;
 
 namespace NorthWind.Sales.Backend.UseCases.Search;
@@ -53,4 +54,24 @@ internal class SearchProductsInteractor(IQueriesRepository repository)
         return await repository.SearchProducts(
             Parameters.Text, Parameters.Page, Parameters.PageSize);
     }
+}
+
+internal class SearchOrdersInteractor(IQueriesRepository repository)
+    : ISearchOrdersInputPort
+{
+    public async Task<PagedResultDto<OrderSearchItemDto>> Handle(
+        string text, int page, int pageSize)
+    {
+        var Parameters = SearchParameters.Normalize(text, page, pageSize);
+
+        return await repository.SearchOrders(
+            Parameters.Text, Parameters.Page, Parameters.PageSize);
+    }
+}
+
+internal class GetInvoiceInteractor(IQueriesRepository repository)
+    : IGetInvoiceInputPort
+{
+    public async Task<InvoiceDto?> Handle(int orderId) =>
+        await repository.GetInvoice(orderId);
 }

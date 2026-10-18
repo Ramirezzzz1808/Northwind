@@ -25,6 +25,28 @@
   },
   {
     "ContainingType": "Microsoft.AspNetCore.Builder.SearchController",
+    "Method": "GetInvoice",
+    "RelativePath": "GetInvoice",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Microsoft.AspNetCore.Builder.SearchController",
     "Method": "SearchCustomers",
     "RelativePath": "SearchCustomers",
     "HttpMethod": "GET",
@@ -50,6 +72,40 @@
     "ReturnTypes": [
       {
         "Type": "NorthWind.Sales.Entities.Dtos.Search.PagedResultDto\u00601[[NorthWind.Sales.Entities.Dtos.Search.CustomerSearchItemDto, NorthWind.Sales.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Microsoft.AspNetCore.Builder.SearchController",
+    "Method": "SearchOrders",
+    "RelativePath": "SearchOrders",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "text",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "NorthWind.Sales.Entities.Dtos.Search.PagedResultDto\u00601[[NorthWind.Sales.Entities.Dtos.Invoice.OrderSearchItemDto, NorthWind.Sales.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],

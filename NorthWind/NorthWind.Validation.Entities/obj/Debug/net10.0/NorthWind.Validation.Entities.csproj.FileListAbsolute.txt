@@ -6,9 +6,9 @@ C:\Users\Antonio\source\repos\NorthWind\NorthWind.Validation.Entities\obj\Debug\
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Validation.Entities\obj\Debug\net10.0\NorthWind.Validation.Entities.AssemblyInfoInputs.cache
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Validation.Entities\obj\Debug\net10.0\NorthWind.Validation.Entities.AssemblyInfo.cs
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Validation.Entities\obj\Debug\net10.0\NorthWind.Validation.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Validation.Entities\obj\Debug\net10.0\NorthWind.Validation.Entities.sourcelink.json
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Validation.Entities\obj\Debug\net10.0\NorthWind.Validation.Entities.dll
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Validation.Entities\obj\Debug\net10.0\refint\NorthWind.Validation.Entities.dll
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Validation.Entities\obj\Debug\net10.0\NorthWind.Validation.Entities.pdb
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Validation.Entities\obj\Debug\net10.0\ref\NorthWind.Validation.Entities.dll
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Validation.Entities\obj\Debug\net10.0\NorthWin.939C4A2C.Up2Date
-C:\Users\Antonio\source\repos\NorthWind\NorthWind.Validation.Entities\obj\Debug\net10.0\NorthWind.Validation.Entities.sourcelink.json

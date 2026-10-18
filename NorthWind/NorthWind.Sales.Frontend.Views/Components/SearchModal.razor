@@ -1,0 +1,162 @@
+@typeparam TItem
+@using NorthWind.Sales.Entities.Dtos.Search
+
+<div class="modal fade show d-block" tabindex="-1" role="dialog"
+     style="background-color: rgba(0,0,0,.5);">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">@Title</h5>
+                <button type="button" class="btn-close" aria-label="@PosMessages.CloseButton"
+                        @onclick="OnClose"></button>
+            </div>
+
+            <div class="modal-body">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control"
+                           placeholder="@PosMessages.SearchPlaceholder"
+                           @bind="SearchText"
+                           @bind:event="oninput"
+                           @onkeydown="HandleKeyDown" />
+                    <button type="button" class="btn btn-primary"
+                            @onclick="SearchFirstPage">
+                        @PosMessages.SearchButton
+                    </button>
+                </div>
+
+                @if (!string.IsNullOrEmpty(Error))
+                {
+                    <div class="alert alert-danger">@Error</div>
+                }
+
+                @if (IsLoading)
+                {
+                    <p class="text-muted">@PosMessages.Loading</p>
+                }
+                else if (Result == null || Result.Items.Count == 0)
+                {
+                    <p class="text-muted">@PosMessages.NoResults</p>
+                }
+                else
+                {
+                    <div class="table-responsive">
+                        <table class="table table-hover table-sm align-middle">
+                            <thead>
+                                <tr>
+                                    @HeaderTemplate
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var Item in Result.Items)
+                                {
+                                    <tr>
+                                        @RowTemplate(Item)
+                                        <td class="text-end">
+                                            <button type="button"
+                                                    class="btn btn-sm btn-success"
+                                                    @onclick="() => OnSelected.InvokeAsync(Item)">
+                                                @PosMessages.SelectButton
+                                            </button>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                }
+            </div>
+
+            <div class="modal-footer justify-content-between">
+                <div>
+                    @if (Result != null && Result.TotalPages > 0)
+                    {
+                        <small class="text-muted">
+                            Página @Result.Page de @Result.TotalPages
+                            (@Result.TotalCount registros)
+                        </small>
+                    }
+                </div>
+                <div>
+                    <button type="button" class="btn btn-outline-secondary"
+                            disabled="@(!CanGoPrevious)" @onclick="PreviousPage">
+                        @PosMessages.PreviousButton
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary"
+                            disabled="@(!CanGoNext)" @onclick="NextPage">
+                        @PosMessages.NextButton
+                    </button>
+                    <button type="button" class="btn btn-secondary"
+                            @onclick="OnClose">
+                        @PosMessages.CloseButton
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    const int PageSize = 8;
+
+    [Parameter, EditorRequired]
+    public string Title { get; set; } = "";
+
+    [Parameter, EditorRequired]
+    public Func<string, int, int, Task<PagedResultDto<TItem>>> Search { get; set; } = default!;
+
+    [Parameter, EditorRequired]
+    public RenderFragment HeaderTemplate { get; set; } = default!;
+
+    [Parameter, EditorRequired]
+    public RenderFragment<TItem> RowTemplate { get; set; } = default!;
+
+    [Parameter]
+    public EventCallback<TItem> OnSelected { get; set; }
+
+    [Parameter]
+    public EventCallback OnClose { get; set; }
+
+    string SearchText = "";
+    string? Error;
+    bool IsLoading;
+    int CurrentPage = 1;
+    PagedResultDto<TItem>? Result;
+
+    bool CanGoPrevious => !IsLoading && Result != null && CurrentPage > 1;
+    bool CanGoNext => !IsLoading && Result != null && CurrentPage < Result.TotalPages;
+
+    protected override async Task OnInitializedAsync() =>
+        await LoadPage(1);
+
+    async Task SearchFirstPage() => await LoadPage(1);
+    async Task PreviousPage() => await LoadPage(CurrentPage - 1);
+    async Task NextPage() => await LoadPage(CurrentPage + 1);
+
+    async Task HandleKeyDown(KeyboardEventArgs e)
+    {
+        if (e.Key == "Enter")
+        {
+            await LoadPage(1);
+        }
+    }
+
+    async Task LoadPage(int page)
+    {
+        IsLoading = true;
+        Error = null;
+        try
+        {
+            Result = await Search(SearchText?.Trim() ?? "", page, PageSize);
+            CurrentPage = page;
+        }
+        catch (Exception)
+        {
+            Error = PosMessages.SearchFailed;
+        }
+        finally
+        {
+            IsLoading = false;
+        }
+    }
+}

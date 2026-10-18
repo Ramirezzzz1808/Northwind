@@ -1,4 +1,4 @@
-﻿@inherits NavMenuLayout
+@inherits NavMenuLayout
 
 <SectionContent SectionId="NavBarBrandSection">
     <a class="navbar-brand" href="">@CommonMessages.NavBarBrandTitle</a>
@@ -15,6 +15,9 @@
             <NavMenuItem HRef="CreateOrder">
                 <!-- ... ícono card-checklist ... -->
                 @CreateOrderMessages.CreateOrderMenuItemTitle
+            </NavMenuItem>
+            <NavMenuItem HRef="invoices">
+                @InvoiceMessages.PageTitle
             </NavMenuItem>
         </Authorized>
     </AuthorizeView>

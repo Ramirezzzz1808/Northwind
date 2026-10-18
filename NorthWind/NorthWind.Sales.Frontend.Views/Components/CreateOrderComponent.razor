@@ -1,91 +1,196 @@
-﻿<EditForm Model="Order" OnValidSubmit="Order.Send">
+<EditForm Model="Order" OnValidSubmit="Order.Send">
     <ModelValidator Validator="Order.Validator"
                     @ref="Order.ModelValidatorComponentReference" />
     <ValidationSummary />
 
-    <div class="form-group">
-        <label for="customerId">@CreateOrderMessages.CustomerIdLabel</label>
-        <InputText class="form-control" id="customerId"
-                   placeholder="@CreateOrderMessages.CustomerIdLabel"
-                   @bind-Value="Order.CustomerId" />
-        <ValidationMessage For="() => Order.CustomerId" />
+    <h5>@PosMessages.CustomerSection</h5>
+    <div class="row g-3 mb-3">
+        <div class="col-md-4">
+            <label class="form-label">@PosMessages.IdentificationLabel</label>
+            <input class="form-control" readonly value="@Order.CustomerIdentification" />
+        </div>
+        <div class="col-md-5">
+            <label class="form-label">@PosMessages.CustomerNameLabel</label>
+            <input class="form-control" readonly value="@Order.CustomerName" />
+        </div>
+        <div class="col-md-3">
+            <label class="form-label">@PosMessages.EmailLabel</label>
+            <input class="form-control" readonly value="@Order.CustomerEmail" />
+        </div>
+        <div class="col-12">
+            <button type="button" class="btn btn-outline-primary"
+                    @onclick="OpenCustomerModal">
+                @PosMessages.SearchCustomerButton
+            </button>
+            <ValidationMessage For="() => Order.CustomerId" />
+        </div>
     </div>
 
-    <div class="form-group">
-        <label for="shipAddress">@CreateOrderMessages.ShipAddressLabel</label>
-        <InputText class="form-control" id="shipAddress"
-                   placeholder="@CreateOrderMessages.ShipAddressLabel"
-                   @bind-Value="Order.ShipAddress" />
-        <ValidationMessage For="() => Order.ShipAddress" />
-    </div>
-
-    <div class="form-group">
-        <label for="shipCity">@CreateOrderMessages.ShipCityLabel</label>
-        <InputText class="form-control" id="shipCity"
-                   placeholder="@CreateOrderMessages.ShipCityLabel"
-                   @bind-Value="Order.ShipCity" />
-        <ValidationMessage For="() => Order.ShipCity" />
-    </div>
-
-    <div class="form-group">
-        <label for="shipCountry">@CreateOrderMessages.ShipCountryLabel</label>
-        <InputText class="form-control" id="shipCountry"
-                   placeholder="@CreateOrderMessages.ShipCountryLabel"
-                   @bind-Value="Order.ShipCountry" />
-        <ValidationMessage For="() => Order.ShipCountry" />
-    </div>
-
-    <div class="form-group">
-        <label for="shipPostalCode">@CreateOrderMessages.ShipPostalCodeLabel</label>
-        <InputText class="form-control" id="shipPostalCode"
-                   placeholder="@CreateOrderMessages.ShipPostalCodeLabel"
-                   @bind-Value="Order.ShipPostalCode" />
-        <ValidationMessage For="() => Order.ShipPostalCode" />
+    <h5>@PosMessages.ShippingSection</h5>
+    <div class="row g-3 mb-3">
+        <div class="col-md-6">
+            <label for="shipAddress" class="form-label">@CreateOrderMessages.ShipAddressLabel</label>
+            <InputText class="form-control" id="shipAddress"
+                       @bind-Value="Order.ShipAddress" />
+            <ValidationMessage For="() => Order.ShipAddress" />
+        </div>
+        <div class="col-md-3">
+            <label for="shipCity" class="form-label">@CreateOrderMessages.ShipCityLabel</label>
+            <InputText class="form-control" id="shipCity"
+                       @bind-Value="Order.ShipCity" />
+            <ValidationMessage For="() => Order.ShipCity" />
+        </div>
+        <div class="col-md-3">
+            <label for="shipCountry" class="form-label">@CreateOrderMessages.ShipCountryLabel</label>
+            <InputText class="form-control" id="shipCountry"
+                       @bind-Value="Order.ShipCountry" />
+            <ValidationMessage For="() => Order.ShipCountry" />
+        </div>
+        <div class="col-md-3">
+            <label for="shipPostalCode" class="form-label">@CreateOrderMessages.ShipPostalCodeLabel</label>
+            <InputText class="form-control" id="shipPostalCode"
+                       @bind-Value="Order.ShipPostalCode" />
+            <ValidationMessage For="() => Order.ShipPostalCode" />
+        </div>
     </div>
 
     <hr />
 
-    <div class="row">
-        <div class="col">@CreateOrderMessages.ProductIdLabel</div>
-        <div class="col">@CreateOrderMessages.UnitPriceLabel</div>
-        <div class="col">@CreateOrderMessages.QuantityLabel</div>
+    <div class="d-flex justify-content-between align-items-center mb-2">
+        <h5 class="mb-0">@PosMessages.DetailSection</h5>
+        <button type="button" class="btn btn-outline-primary"
+                @onclick="OpenProductModalForAdd">
+            @PosMessages.SearchProductButton
+        </button>
     </div>
 
-    @foreach (var Item in Order.OrderDetails)
+    @if (Order.OrderDetails.Count == 0)
     {
-        <div class="row">
-            <div class="col">
-                <InputNumber class="form-control"
-                             placeholder="@CreateOrderMessages.ProductIdLabel"
-                             @bind-Value="Item.ProductId" />
-                <ValidationMessage For="() => Item.ProductId" />
-            </div>
-            <div class="col">
-                <InputNumber class="form-control"
-                             placeholder="@CreateOrderMessages.UnitPriceLabel"
-                             @bind-Value="Item.UnitPrice" />
-                <ValidationMessage For="() => Item.UnitPrice" />
-            </div>
-            <div class="col">
-                <InputNumber class="form-control"
-                             placeholder="@CreateOrderMessages.QuantityLabel"
-                             @bind-Value="Item.Quantity" />
-                <ValidationMessage For="() => Item.Quantity" />
-            </div>
+        <p class="text-muted">@PosMessages.NoLines</p>
+    }
+    else
+    {
+        <div class="table-responsive">
+            <table class="table align-middle">
+                <thead>
+                    <tr>
+                        <th>@PosMessages.ProductLabel</th>
+                        <th class="text-end">@PosMessages.UnitPriceLabel</th>
+                        <th style="width: 120px;">@PosMessages.QuantityLabel</th>
+                        <th class="text-end">@PosMessages.StockLabel</th>
+                        <th class="text-end">@PosMessages.LineTotalLabel</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var Item in Order.OrderDetails)
+                    {
+                        <tr @key="Item">
+                            <td>@Item.ProductName</td>
+                            <td class="text-end">@Item.UnitPrice.ToString("N2")</td>
+                            <td>
+                                <InputNumber class="form-control form-control-sm"
+                                             min="1" max="@Item.UnitsInStock"
+                                             @bind-Value="Item.Quantity"
+                                             @bind-Value:after="() => Order.EnforceQuantity(Item)" />
+                            </td>
+                            <td class="text-end">@Item.UnitsInStock</td>
+                            <td class="text-end">@Item.LineTotal.ToString("N2")</td>
+                            <td class="text-end text-nowrap">
+                                <button type="button" class="btn btn-sm btn-outline-secondary"
+                                        @onclick="() => OpenProductModalForReplace(Item)">
+                                    @PosMessages.ChangeProductButton
+                                </button>
+                                <button type="button" class="btn btn-sm btn-outline-danger"
+                                        @onclick="() => Order.RemoveDetail(Item)">
+                                    @PosMessages.RemoveProductButton
+                                </button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
         </div>
     }
 
-    <hr />
+    <div class="row justify-content-end mb-3">
+        <div class="col-md-4">
+            <table class="table table-sm">
+                <tr>
+                    <th>@PosMessages.SubtotalLabel</th>
+                    <td class="text-end">@Order.Subtotal.ToString("N2")</td>
+                </tr>
+                <tr>
+                    <th>@PosMessages.TaxLabel</th>
+                    <td class="text-end">@Order.TaxAmount.ToString("N2")</td>
+                </tr>
+                <tr class="table-active">
+                    <th>@PosMessages.TotalLabel</th>
+                    <td class="text-end fw-bold">@Order.Total.ToString("N2")</td>
+                </tr>
+            </table>
+        </div>
+    </div>
 
-    <button type="button" class="btn btn-secondary"
-            @onclick="Order.AddNewOrderDetailItem">
-        Agregar producto
+    <button type="submit" class="btn btn-primary">
+        @PosMessages.SaveOrderButton
     </button>
 
-    <button type="submit" class="btn btn-primary">Enviar</button>
+    @if (!string.IsNullOrWhiteSpace(Order.ErrorMessage))
+    {
+        <div class="alert alert-danger mt-3" role="alert">@Order.ErrorMessage</div>
+    }
 
     @if (!string.IsNullOrWhiteSpace(Order.InformationMessage))
     {
-        <div class="alert alert-info mt-3">@Order.InformationMessage</div>
+        <div class="alert alert-success mt-3" role="status">
+            @Order.InformationMessage
+            @if (Order.LastOrderId.HasValue && Order.InformationMessage.Contains('#'))
+            {
+                <a class="alert-link ms-2" href="invoices/@Order.LastOrderId">
+                    @InvoiceMessages.ViewInvoiceLink
+                </a>
+            }
+        </div>
     }
 </EditForm>
+
+@if (ShowCustomerModal)
+{
+    <SearchModal TItem="CustomerSearchItemDto"
+                 Title="@PosMessages.CustomerSearchTitle"
+                 Search="Order.SearchCustomers"
+                 OnSelected="CustomerSelected"
+                 OnClose="CloseModals">
+        <HeaderTemplate>
+            <th>@PosMessages.IdentificationLabel</th>
+            <th>@PosMessages.CustomerNameLabel</th>
+            <th>@PosMessages.EmailLabel</th>
+        </HeaderTemplate>
+        <RowTemplate Context="Customer">
+            <td>@Customer.Identification</td>
+            <td>@Customer.Name</td>
+            <td>@Customer.Email</td>
+        </RowTemplate>
+    </SearchModal>
+}
+
+@if (ShowProductModal)
+{
+    <SearchModal TItem="ProductSearchItemDto"
+                 Title="@PosMessages.ProductSearchTitle"
+                 Search="Order.SearchProducts"
+                 OnSelected="ProductSelected"
+                 OnClose="CloseModals">
+        <HeaderTemplate>
+            <th>@PosMessages.ProductLabel</th>
+            <th class="text-end">@PosMessages.UnitPriceLabel</th>
+            <th class="text-end">@PosMessages.StockLabel</th>
+        </HeaderTemplate>
+        <RowTemplate Context="Product">
+            <td>@Product.Name</td>
+            <td class="text-end">@Product.UnitPrice.ToString("N2")</td>
+            <td class="text-end">@Product.UnitsInStock</td>
+        </RowTemplate>
+    </SearchModal>
+}

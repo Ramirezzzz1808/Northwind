@@ -1,3 +1,4 @@
+using NorthWind.Sales.Entities.Dtos.Invoice;
 using NorthWind.Sales.Entities.Dtos.Search;
 
 namespace NorthWind.Sales.Backend.Repositories.Repositories;
@@ -125,5 +126,109 @@ internal class QueriesRepository(INorthWindSalesQueriesDataContext context)
             Page = page,
             PageSize = pageSize
         };
+    }
+
+    public async Task<PagedResultDto<OrderSearchItemDto>> SearchOrders(
+        string text, int page, int pageSize)
+    {
+        var Joined =
+            from o in context.Orders
+            join c in context.Customers on o.CustomerId equals c.Id
+            select new { Order = o, Customer = c };
+
+        if (!string.IsNullOrWhiteSpace(text))
+        {
+            // Por número de factura o por datos del cliente
+            // (código, nombre o cédula).
+            if (int.TryParse(text, out int OrderId))
+            {
+                Joined = Joined.Where(x =>
+                    x.Order.Id == OrderId ||
+                    x.Customer.Name.Contains(text) ||
+                    x.Customer.Identification.Contains(text) ||
+                    x.Customer.Id.Contains(text));
+            }
+            else
+            {
+                Joined = Joined.Where(x =>
+                    x.Customer.Name.Contains(text) ||
+                    x.Customer.Identification.Contains(text) ||
+                    x.Customer.Id.Contains(text));
+            }
+        }
+
+        int TotalCount = await context.CountAsync(Joined);
+
+        var PageQuery = Joined
+            .OrderByDescending(x => x.Order.Id)
+            .Skip((page - 1) * pageSize)
+            .Take(pageSize)
+            .Select(x => new OrderSearchItemDto
+            {
+                Id = x.Order.Id,
+                OrderDate = x.Order.OrderDate,
+                CustomerId = x.Customer.Id,
+                CustomerName = x.Customer.Name,
+                Identification = x.Customer.Identification ?? "",
+                Total = x.Order.Total
+            });
+
+        var Items = await context.ToListAsync(PageQuery);
+
+        return new PagedResultDto<OrderSearchItemDto>
+        {
+            Items = Items.ToList(),
+            TotalCount = TotalCount,
+            Page = page,
+            PageSize = pageSize
+        };
+    }
+
+    public async Task<InvoiceDto?> GetInvoice(int orderId)
+    {
+        var HeaderQuery =
+            from o in context.Orders
+            where o.Id == orderId
+            join c in context.Customers on o.CustomerId equals c.Id
+            select new InvoiceDto
+            {
+                Id = o.Id,
+                OrderDate = o.OrderDate,
+                CustomerId = c.Id,
+                CustomerName = c.Name,
+                Identification = c.Identification ?? "",
+                Email = c.Email ?? "",
+                ShipAddress = o.ShipAddress ?? "",
+                ShipCity = o.ShipCity ?? "",
+                ShipCountry = o.ShipCountry ?? "",
+                ShipPostalCode = o.ShipPostalCode ?? "",
+                Subtotal = o.Subtotal,
+                TaxAmount = o.TaxAmount,
+                Total = o.Total
+            };
+
+        var Invoice = await context.FirstOrDefaultAsync(HeaderQuery);
+
+        if (Invoice == null)
+        {
+            return null;
+        }
+
+        var LinesQuery =
+            from d in context.OrderDetails
+            where d.OrderId == orderId
+            join p in context.Products on d.ProductId equals p.Id
+            orderby p.Name
+            select new InvoiceLineDto
+            {
+                ProductId = d.ProductId,
+                ProductName = p.Name,
+                UnitPrice = d.UnitPrice,
+                Quantity = d.Quantity
+            };
+
+        Invoice.Lines = (await context.ToListAsync(LinesQuery)).ToList();
+
+        return Invoice;
     }
 }

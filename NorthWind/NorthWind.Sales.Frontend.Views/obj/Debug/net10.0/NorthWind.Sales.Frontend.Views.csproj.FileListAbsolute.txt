@@ -8,9 +8,11 @@ C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net10.0\NorthWind.RazorComponents.dll
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net10.0\NorthWind.Sales.Entities.dll
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net10.0\NorthWind.Sales.Frontend.BusinessObjects.dll
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net10.0\NorthWind.Validation.Entities.dll
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net10.0\NorthWind.RazorComponents.pdb
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net10.0\NorthWind.Sales.Frontend.BusinessObjects.pdb
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net10.0\NorthWind.Sales.Entities.pdb
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net10.0\NorthWind.Validation.Entities.pdb
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net10.0\EmbeddedAttribute.cs
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net10.0\ValidatableTypeAttribute.cs
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net10.0\NorthWind.Sales.Frontend.Views.csproj.AssemblyReference.cache
@@ -22,6 +24,7 @@ C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net10.0\NorthWind.Sales.Frontend.Views.AssemblyInfoInputs.cache
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net10.0\NorthWind.Sales.Frontend.Views.AssemblyInfo.cs
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net10.0\NorthWind.Sales.Frontend.Views.csproj.CoreCompileInputs.cache
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net10.0\NorthWind.Sales.Frontend.Views.sourcelink.json
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net10.0\rjimswa.dswa.cache.json
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
@@ -44,6 +47,3 @@ C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net10.0\refint\NorthWind.Sales.Frontend.Views.dll
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net10.0\NorthWind.Sales.Frontend.Views.pdb
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net10.0\ref\NorthWind.Sales.Frontend.Views.dll
-C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net10.0\NorthWind.Validation.Entities.dll
-C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net10.0\NorthWind.Validation.Entities.pdb
-C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net10.0\NorthWind.Sales.Frontend.Views.sourcelink.json

@@ -13,6 +13,9 @@ internal class NorthWindSalesQueriesDataContext
 
     public new IQueryable<Customer> Customers => base.Customers;
     public new IQueryable<Product> Products => base.Products;
+    public new IQueryable<Order> Orders => base.Orders;
+    public new IQueryable<NorthWind.Sales.Backend.Repositories.Entities.OrderDetail> OrderDetails =>
+        base.OrderDetails;
 
     public Task<ReturnType> FirstOrDefaultAsync<ReturnType>(
         IQueryable<ReturnType> queryable) =>

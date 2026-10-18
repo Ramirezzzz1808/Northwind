@@ -13,6 +13,8 @@ public static class DependencyContainer
         services.AddScoped<ICreateOrderInputPort, CreateOrderInteractor>();
         services.AddScoped<ISearchCustomersInputPort, SearchCustomersInteractor>();
         services.AddScoped<ISearchProductsInputPort, SearchProductsInteractor>();
+        services.AddScoped<ISearchOrdersInputPort, SearchOrdersInteractor>();
+        services.AddScoped<IGetInvoiceInputPort, GetInvoiceInteractor>();
 
         // El orden de registro es el orden de ejecución.
         services.AddModelValidator<CreateOrderDto, CreateOrderDuplicateProductValidator>();
