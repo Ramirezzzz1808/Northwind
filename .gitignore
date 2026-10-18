@@ -1,0 +1,9 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userprefs
+
+# Resultados de compilación
+[Bb]in/
+[Oo]bj/
