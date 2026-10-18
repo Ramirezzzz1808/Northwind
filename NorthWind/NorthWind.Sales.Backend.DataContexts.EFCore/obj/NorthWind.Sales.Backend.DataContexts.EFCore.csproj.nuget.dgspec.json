@@ -17,6 +17,7 @@
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+          "C:\\Users\\Antonio\\source\\repos\\NorthWind\\NuGet.Config",
           "C:\\Users\\Antonio\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -25,8 +26,7 @@
           "net10.0"
         ],
         "sources": {
-          "C:\\NorthWind.Packages": {},
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Antonio\\source\\repos\\NorthWind\\LocalPackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -373,6 +373,7 @@
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+          "C:\\Users\\Antonio\\source\\repos\\NorthWind\\NuGet.Config",
           "C:\\Users\\Antonio\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -381,8 +382,7 @@
           "net10.0"
         ],
         "sources": {
-          "C:\\NorthWind.Packages": {},
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Antonio\\source\\repos\\NorthWind\\LocalPackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -721,6 +721,7 @@
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+          "C:\\Users\\Antonio\\source\\repos\\NorthWind\\NuGet.Config",
           "C:\\Users\\Antonio\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -729,8 +730,7 @@
           "net10.0"
         ],
         "sources": {
-          "C:\\NorthWind.Packages": {},
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Antonio\\source\\repos\\NorthWind\\LocalPackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -1073,6 +1073,7 @@
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+          "C:\\Users\\Antonio\\source\\repos\\NorthWind\\NuGet.Config",
           "C:\\Users\\Antonio\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -1081,8 +1082,7 @@
           "net10.0"
         ],
         "sources": {
-          "C:\\NorthWind.Packages": {},
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Antonio\\source\\repos\\NorthWind\\LocalPackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -1568,6 +1568,7 @@
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+          "C:\\Users\\Antonio\\source\\repos\\NorthWind\\NuGet.Config",
           "C:\\Users\\Antonio\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -1576,8 +1577,7 @@
           "net10.0"
         ],
         "sources": {
-          "C:\\NorthWind.Packages": {},
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Antonio\\source\\repos\\NorthWind\\LocalPackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -1938,6 +1938,7 @@
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+          "C:\\Users\\Antonio\\source\\repos\\NorthWind\\NuGet.Config",
           "C:\\Users\\Antonio\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -1946,8 +1947,7 @@
           "net10.0"
         ],
         "sources": {
-          "C:\\NorthWind.Packages": {},
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Antonio\\source\\repos\\NorthWind\\LocalPackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -2309,6 +2309,7 @@
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+          "C:\\Users\\Antonio\\source\\repos\\NorthWind\\NuGet.Config",
           "C:\\Users\\Antonio\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -2317,8 +2318,7 @@
           "net10.0"
         ],
         "sources": {
-          "C:\\NorthWind.Packages": {},
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Antonio\\source\\repos\\NorthWind\\LocalPackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -2668,6 +2668,7 @@
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+          "C:\\Users\\Antonio\\source\\repos\\NorthWind\\NuGet.Config",
           "C:\\Users\\Antonio\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -2676,8 +2677,7 @@
           "net10.0"
         ],
         "sources": {
-          "C:\\NorthWind.Packages": {},
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Antonio\\source\\repos\\NorthWind\\LocalPackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -3016,6 +3016,7 @@
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+          "C:\\Users\\Antonio\\source\\repos\\NorthWind\\NuGet.Config",
           "C:\\Users\\Antonio\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -3024,8 +3025,7 @@
           "net10.0"
         ],
         "sources": {
-          "C:\\NorthWind.Packages": {},
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Antonio\\source\\repos\\NorthWind\\LocalPackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -3368,6 +3368,7 @@
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+          "C:\\Users\\Antonio\\source\\repos\\NorthWind\\NuGet.Config",
           "C:\\Users\\Antonio\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -3376,8 +3377,7 @@
           "net10.0"
         ],
         "sources": {
-          "C:\\NorthWind.Packages": {},
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Antonio\\source\\repos\\NorthWind\\LocalPackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

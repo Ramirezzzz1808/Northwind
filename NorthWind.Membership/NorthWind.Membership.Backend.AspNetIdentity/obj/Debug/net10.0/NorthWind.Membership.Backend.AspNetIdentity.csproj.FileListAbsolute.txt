@@ -14,4 +14,4 @@ C:\Users\Antonio\source\repos\NorthWind.Membership\NorthWind.Membership.Backend.
 C:\Users\Antonio\source\repos\NorthWind.Membership\NorthWind.Membership.Backend.AspNetIdentity\obj\Debug\net10.0\NorthWind.Membership.Backend.AspNetIdentity.pdb
 C:\Users\Antonio\source\repos\NorthWind.Membership\NorthWind.Membership.Backend.AspNetIdentity\obj\Debug\net10.0\NorthWind.Membership.Backend.AspNetIdentity.genruntimeconfig.cache
 C:\Users\Antonio\source\repos\NorthWind.Membership\NorthWind.Membership.Backend.AspNetIdentity\obj\Debug\net10.0\ref\NorthWind.Membership.Backend.AspNetIdentity.dll
-C:\Users\Antonio\source\repos\NorthWind.Membership\NorthWind.Membership.Backend.AspNetIdentity\obj\Debug\net10.0\NorthWin.9281C06D.Up2Date
+C:\Users\Antonio\source\repos\NorthWind.Membership\NorthWind.Membership.Backend.AspNetIdentity\obj\Debug\net10.0\NorthWind.Membership.Backend.AspNetIdentity.sourcelink.json

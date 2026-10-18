@@ -11,4 +11,3 @@ C:\Users\Antonio\source\repos\NorthWind\NorthWind.Events.Entities\obj\Debug\net1
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Events.Entities\obj\Debug\net10.0\refint\NorthWind.Events.Entities.dll
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Events.Entities\obj\Debug\net10.0\NorthWind.Events.Entities.pdb
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Events.Entities\obj\Debug\net10.0\ref\NorthWind.Events.Entities.dll
-C:\Users\Antonio\source\repos\NorthWind\NorthWind.Events.Entities\obj\Debug\net10.0\NorthWin.42602CFC.Up2Date
