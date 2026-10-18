@@ -1,4 +1,4 @@
-﻿using NorthWind.Sales.Backend.BusinessObjects.Aggregates;
+using NorthWind.Sales.Backend.BusinessObjects.Aggregates;
 using NorthWind.Sales.Backend.BusinessObjects.Interfaces.Repositories;
 using NorthWind.Sales.Backend.Repositories.Interfaces;
 
@@ -18,6 +18,10 @@ internal class CommandsRepository(INorthWindSalesCommandsDataContext context) : 
                 Quantity = d.Quantity,
                 UnitPrice = d.UnitPrice
             }).ToArray());
+
+        // Disminución automática del inventario en la misma unidad de trabajo.
+        await context.DecreaseProductsStockAsync(
+            order.OrderDetails.ToDictionary(d => d.ProductId, d => d.Quantity));
     }
 
     public async Task SaveChanges() =>

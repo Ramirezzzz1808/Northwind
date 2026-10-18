@@ -13,3 +13,4 @@ C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.BusinessObjects
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.BusinessObjects\obj\Debug\net10.0\refint\NorthWind.Sales.Frontend.BusinessObjects.dll
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.BusinessObjects\obj\Debug\net10.0\NorthWind.Sales.Frontend.BusinessObjects.pdb
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.BusinessObjects\obj\Debug\net10.0\ref\NorthWind.Sales.Frontend.BusinessObjects.dll
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.BusinessObjects\obj\Debug\net10.0\NorthWind.Sales.Frontend.BusinessObjects.sourcelink.json

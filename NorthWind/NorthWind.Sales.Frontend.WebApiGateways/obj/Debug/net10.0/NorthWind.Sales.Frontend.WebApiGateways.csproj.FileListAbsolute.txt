@@ -19,3 +19,4 @@ C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.WebApiGateways\
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.WebApiGateways\bin\Debug\net10.0\NorthWind.Validation.Entities.dll
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.WebApiGateways\bin\Debug\net10.0\NorthWind.HttpDelegatingHandlers.pdb
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.WebApiGateways\bin\Debug\net10.0\NorthWind.Validation.Entities.pdb
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.WebApiGateways\obj\Debug\net10.0\NorthWind.Sales.Frontend.WebApiGateways.sourcelink.json

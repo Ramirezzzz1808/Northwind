@@ -1,7 +1,10 @@
-﻿namespace NorthWind.Sales.Backend.BusinessObjects.Aggregates;
+namespace NorthWind.Sales.Backend.BusinessObjects.Aggregates;
 
 public class OrderAggregate : Order
 {
+    // IVA vigente (15%).
+    public const decimal TaxRate = 0.15m;
+
     readonly List<OrderDetail> OrderDetailsField = [];
     public IReadOnlyCollection<OrderDetail> OrderDetails => OrderDetailsField;
 
@@ -21,6 +24,14 @@ public class OrderAggregate : Order
             new OrderDetail(productId, unitPrice, quantity));
     }
 
+    public void CalculateTotals()
+    {
+        Subtotal = Math.Round(
+            OrderDetailsField.Sum(d => d.UnitPrice * d.Quantity), 2);
+        TaxAmount = Math.Round(Subtotal * TaxRate, 2);
+        Total = Subtotal + TaxAmount;
+    }
+
     public static OrderAggregate From(CreateOrderDto orderDto)
     {
         OrderAggregate OrderAggregate = new OrderAggregate
@@ -37,6 +48,8 @@ public class OrderAggregate : Order
             OrderAggregate.AddDetail(Item.ProductId,
                 Item.UnitPrice, Item.Quantity);
         }
+
+        OrderAggregate.CalculateTotals();
 
         return OrderAggregate;
     }

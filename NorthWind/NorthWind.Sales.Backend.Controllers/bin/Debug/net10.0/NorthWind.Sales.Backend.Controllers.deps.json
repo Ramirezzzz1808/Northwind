@@ -8,15 +8,33 @@
     ".NETCoreApp,Version=v10.0": {
       "NorthWind.Sales.Backend.Controllers/1.0.0": {
         "dependencies": {
-          "NorthWind.Sales.Backend.BusinessObjects": "1.0.0"
+          "NorthWind.Sales.Backend.BusinessObjects": "1.0.0",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "runtime": {
           "NorthWind.Sales.Backend.Controllers.dll": {}
         }
       },
+      "System.Security.Cryptography.Pkcs/10.0.13": {
+        "runtime": {
+          "lib/net10.0/System.Security.Cryptography.Pkcs.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.1326.50504"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net10.0/System.Security.Cryptography.Pkcs.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.1326.50504"
+          }
+        }
+      },
       "NorthWind.DomainLogs.Entities/1.0.0": {
         "dependencies": {
-          "NorthWind.Entities": "1.0.0"
+          "NorthWind.Entities": "1.0.0",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "runtime": {
           "NorthWind.DomainLogs.Entities.dll": {
@@ -26,6 +44,9 @@
         }
       },
       "NorthWind.Entities/1.0.0": {
+        "dependencies": {
+          "System.Security.Cryptography.Pkcs": "10.0.13"
+        },
         "runtime": {
           "NorthWind.Entities.dll": {
             "assemblyVersion": "1.0.0.0",
@@ -34,6 +55,9 @@
         }
       },
       "NorthWind.Events.Entities/1.0.0": {
+        "dependencies": {
+          "System.Security.Cryptography.Pkcs": "10.0.13"
+        },
         "runtime": {
           "NorthWind.Events.Entities.dll": {
             "assemblyVersion": "1.0.0.0",
@@ -43,7 +67,8 @@
       },
       "NorthWind.Exceptions.Entities/1.0.0": {
         "dependencies": {
-          "NorthWind.Validation.Entities": "1.0.0"
+          "NorthWind.Validation.Entities": "1.0.0",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "runtime": {
           "NorthWind.Exceptions.Entities.dll": {
@@ -60,7 +85,8 @@
           "NorthWind.Exceptions.Entities": "1.0.0",
           "NorthWind.Sales.Entities": "1.0.0",
           "NorthWind.Transactions.Entities": "1.0.0",
-          "NorthWind.Validation.Entities": "1.0.0"
+          "NorthWind.Validation.Entities": "1.0.0",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "runtime": {
           "NorthWind.Sales.Backend.BusinessObjects.dll": {
@@ -70,6 +96,9 @@
         }
       },
       "NorthWind.Sales.Entities/1.0.0": {
+        "dependencies": {
+          "System.Security.Cryptography.Pkcs": "10.0.13"
+        },
         "runtime": {
           "NorthWind.Sales.Entities.dll": {
             "assemblyVersion": "1.0.0.0",
@@ -78,6 +107,9 @@
         }
       },
       "NorthWind.Transactions.Entities/1.0.0": {
+        "dependencies": {
+          "System.Security.Cryptography.Pkcs": "10.0.13"
+        },
         "runtime": {
           "NorthWind.Transactions.Entities.dll": {
             "assemblyVersion": "1.0.0.0",
@@ -86,6 +118,9 @@
         }
       },
       "NorthWind.Validation.Entities/1.0.0": {
+        "dependencies": {
+          "System.Security.Cryptography.Pkcs": "10.0.13"
+        },
         "runtime": {
           "NorthWind.Validation.Entities.dll": {
             "assemblyVersion": "1.0.0.0",
@@ -100,6 +135,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "System.Security.Cryptography.Pkcs/10.0.13": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-a+EovgC1fBnwdlQ6cn3j4JFBfKqiFaFvoAhjisOoSvazLAcIznaBzPQP0oYnvccmeXfqUH1KebVZOxSeH6rMaw==",
+      "path": "system.security.cryptography.pkcs/10.0.13",
+      "hashPath": "system.security.cryptography.pkcs.10.0.13.nupkg.sha512"
     },
     "NorthWind.DomainLogs.Entities/1.0.0": {
       "type": "project",

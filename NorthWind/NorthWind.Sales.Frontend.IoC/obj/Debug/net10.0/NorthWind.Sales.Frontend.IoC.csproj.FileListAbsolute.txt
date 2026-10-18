@@ -33,3 +33,4 @@ C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\n
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net10.0\NorthWind.Validation.Entities.pdb
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net10.0\NorthWind.HttpDelegatingHandlers.dll
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net10.0\NorthWind.HttpDelegatingHandlers.pdb
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net10.0\NorthWind.Sales.Frontend.IoC.sourcelink.json

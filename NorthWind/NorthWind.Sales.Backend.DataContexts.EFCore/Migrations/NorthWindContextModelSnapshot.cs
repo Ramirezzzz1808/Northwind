@@ -68,6 +68,18 @@ namespace NorthWind.Sales.Backend.DataContexts.EFCore.Migrations
                     b.Property<int>("ShippingType")
                         .HasColumnType("int");
 
+                    b.Property<decimal>("Subtotal")
+                        .HasPrecision(12, 2)
+                        .HasColumnType("decimal(12,2)");
+
+                    b.Property<decimal>("TaxAmount")
+                        .HasPrecision(12, 2)
+                        .HasColumnType("decimal(12,2)");
+
+                    b.Property<decimal>("Total")
+                        .HasPrecision(12, 2)
+                        .HasColumnType("decimal(12,2)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CustomerId");
@@ -86,6 +98,14 @@ namespace NorthWind.Sales.Backend.DataContexts.EFCore.Migrations
                         .HasPrecision(8, 2)
                         .HasColumnType("decimal(8,2)");
 
+                    b.Property<string>("Email")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Identification")
+                        .HasMaxLength(13)
+                        .HasColumnType("nvarchar(13)");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(40)
@@ -100,30 +120,40 @@ namespace NorthWind.Sales.Backend.DataContexts.EFCore.Migrations
                         {
                             Id = "ALFKI",
                             CurrentBalance = 0m,
+                            Email = "alfki@example.com",
+                            Identification = "1710034065",
                             Name = "Alfreds Futterkiste"
                         },
                         new
                         {
                             Id = "ANTON",
                             CurrentBalance = 100m,
+                            Email = "anton@example.com",
+                            Identification = "1712345675",
                             Name = "Antonio Moreno"
                         },
                         new
                         {
                             Id = "BOLID",
                             CurrentBalance = 0m,
+                            Email = "bolid@example.com",
+                            Identification = "0912345675",
                             Name = "Bolido Comidas"
                         },
                         new
                         {
                             Id = "FAMIA",
                             CurrentBalance = 0m,
+                            Email = "famia@example.com",
+                            Identification = "1801234566",
                             Name = "Familia Arquibaldo"
                         },
                         new
                         {
                             Id = "GALED",
                             CurrentBalance = 0m,
+                            Email = "galed@example.com",
+                            Identification = "0102030400",
                             Name = "Galería del gastrónomo"
                         });
                 });
@@ -162,6 +192,12 @@ namespace NorthWind.Sales.Backend.DataContexts.EFCore.Migrations
                         .IsRequired()
                         .HasMaxLength(40)
                         .HasColumnType("nvarchar(40)");
+
+                    b.Property<byte[]>("RowVersion")
+                        .IsConcurrencyToken()
+                        .IsRequired()
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("rowversion");
 
                     b.Property<decimal>("UnitPrice")
                         .HasPrecision(8, 2)

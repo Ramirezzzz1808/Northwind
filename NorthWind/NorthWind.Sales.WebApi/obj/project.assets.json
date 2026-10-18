@@ -691,15 +691,15 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "System.Security.Cryptography.Pkcs/9.0.11": {
+      "System.Security.Cryptography.Pkcs/10.0.13": {
         "type": "package",
         "compile": {
-          "lib/net9.0/System.Security.Cryptography.Pkcs.dll": {
+          "lib/net10.0/System.Security.Cryptography.Pkcs.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net9.0/System.Security.Cryptography.Pkcs.dll": {
+          "lib/net10.0/System.Security.Cryptography.Pkcs.dll": {
             "related": ".xml"
           }
         },
@@ -707,7 +707,7 @@
           "buildTransitive/net8.0/_._": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/net9.0/System.Security.Cryptography.Pkcs.dll": {
+          "runtimes/win/lib/net10.0/System.Security.Cryptography.Pkcs.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -733,7 +733,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
-          "NorthWind.Entities": "1.0.0"
+          "NorthWind.Entities": "1.0.0",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "compile": {
           "bin/placeholder/NorthWind.DomainLogs.Entities.dll": {}
@@ -745,6 +746,9 @@
       "NorthWind.Entities/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "System.Security.Cryptography.Pkcs": "10.0.13"
+        },
         "compile": {
           "bin/placeholder/NorthWind.Entities.dll": {}
         },
@@ -755,6 +759,9 @@
       "NorthWind.Events.Entities/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "System.Security.Cryptography.Pkcs": "10.0.13"
+        },
         "compile": {
           "bin/placeholder/NorthWind.Events.Entities.dll": {}
         },
@@ -766,7 +773,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
-          "NorthWind.Validation.Entities": "1.0.0"
+          "NorthWind.Validation.Entities": "1.0.0",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "compile": {
           "bin/placeholder/NorthWind.Exceptions.Entities.dll": {}
@@ -788,7 +796,8 @@
           "NorthWind.Exceptions.Entities": "1.0.0",
           "NorthWind.Sales.Entities": "1.0.0",
           "NorthWind.Transactions.Entities": "1.0.0",
-          "NorthWind.Validation.Entities": "1.0.0"
+          "NorthWind.Validation.Entities": "1.0.0",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "compile": {
           "bin/placeholder/NorthWind.Sales.Backend.BusinessObjects.dll": {}
@@ -801,7 +810,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
-          "NorthWind.Sales.Backend.BusinessObjects": "1.0.0"
+          "NorthWind.Sales.Backend.BusinessObjects": "1.0.0",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "compile": {
           "bin/placeholder/NorthWind.Sales.Backend.Controllers.dll": {}
@@ -819,7 +829,8 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore.SqlServer": "10.0.12",
           "NorthWind.Exceptions.Entities": "1.0.0",
-          "NorthWind.Sales.Backend.Repositories": "1.0.0"
+          "NorthWind.Sales.Backend.Repositories": "1.0.0",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "compile": {
           "bin/placeholder/NorthWind.Sales.Backend.DataContexts.EFCore.dll": {}
@@ -846,7 +857,8 @@
           "NorthWind.Transactions.Entities": "1.0.0",
           "NorthWind.UserServices": "1.0.0",
           "NorthWind.ValidationService.FluentValidation": "1.0.0",
-          "System.IdentityModel.Tokens.Jwt": "8.23.0"
+          "System.IdentityModel.Tokens.Jwt": "8.23.0",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "compile": {
           "bin/placeholder/NorthWind.Sales.Backend.IoC.dll": {}
@@ -862,7 +874,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
-          "NorthWind.Sales.Backend.BusinessObjects": "1.0.0"
+          "NorthWind.Sales.Backend.BusinessObjects": "1.0.0",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "compile": {
           "bin/placeholder/NorthWind.Sales.Backend.Presenters.dll": {}
@@ -876,7 +889,8 @@
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
           "NorthWind.DomainLogs.Entities": "1.0.0",
-          "NorthWind.Sales.Backend.BusinessObjects": "1.0.0"
+          "NorthWind.Sales.Backend.BusinessObjects": "1.0.0",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "compile": {
           "bin/placeholder/NorthWind.Sales.Backend.Repositories.dll": {}
@@ -889,7 +903,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
-          "NorthWind.Sales.Backend.BusinessObjects": "1.0.0"
+          "NorthWind.Sales.Backend.BusinessObjects": "1.0.0",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "compile": {
           "bin/placeholder/NorthWind.Sales.Backend.SmtpGateways.dll": {}
@@ -902,7 +917,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
-          "NorthWind.Sales.Backend.BusinessObjects": "1.0.0"
+          "NorthWind.Sales.Backend.BusinessObjects": "1.0.0",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "compile": {
           "bin/placeholder/NorthWind.Sales.Backend.UseCases.dll": {}
@@ -914,6 +930,9 @@
       "NorthWind.Sales.Entities/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "System.Security.Cryptography.Pkcs": "10.0.13"
+        },
         "compile": {
           "bin/placeholder/NorthWind.Sales.Entities.dll": {}
         },
@@ -926,7 +945,8 @@
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
           "NorthWind.Sales.Entities": "1.0.0",
-          "NorthWind.Validation.Entities": "1.0.0"
+          "NorthWind.Validation.Entities": "1.0.0",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "compile": {
           "bin/placeholder/NorthWind.Sales.Validators.Entities.dll": {}
@@ -938,6 +958,9 @@
       "NorthWind.Transactions.Entities/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "System.Security.Cryptography.Pkcs": "10.0.13"
+        },
         "compile": {
           "bin/placeholder/NorthWind.Transactions.Entities.dll": {}
         },
@@ -949,7 +972,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
-          "NorthWind.Entities": "1.0.0"
+          "NorthWind.Entities": "1.0.0",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "compile": {
           "bin/placeholder/NorthWind.UserServices.dll": {}
@@ -964,6 +988,9 @@
       "NorthWind.Validation.Entities/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "System.Security.Cryptography.Pkcs": "10.0.13"
+        },
         "compile": {
           "bin/placeholder/NorthWind.Validation.Entities.dll": {}
         },
@@ -976,7 +1003,8 @@
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
           "FluentValidation": "12.1.1",
-          "NorthWind.Validation.Entities": "1.0.0"
+          "NorthWind.Validation.Entities": "1.0.0",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "compile": {
           "bin/placeholder/NorthWind.ValidationService.FluentValidation.dll": {}
@@ -2053,20 +2081,21 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Security.Cryptography.Pkcs/9.0.11": {
-      "sha512": "YS2YqtN6fFjlTDIQI+ucjbbrEvwMn796r+VLTQRr/5Oy6g+i+m7nIou83KnJCnAcKna2I+5eVJRks6SoHSpetQ==",
+    "System.Security.Cryptography.Pkcs/10.0.13": {
+      "sha512": "a+EovgC1fBnwdlQ6cn3j4JFBfKqiFaFvoAhjisOoSvazLAcIznaBzPQP0oYnvccmeXfqUH1KebVZOxSeH6rMaw==",
       "type": "package",
-      "path": "system.security.cryptography.pkcs/9.0.11",
+      "path": "system.security.cryptography.pkcs/10.0.13",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "buildTransitive/net461/System.Security.Cryptography.Pkcs.targets",
         "buildTransitive/net462/_._",
         "buildTransitive/net8.0/_._",
         "buildTransitive/netcoreapp2.0/System.Security.Cryptography.Pkcs.targets",
+        "lib/net10.0/System.Security.Cryptography.Pkcs.dll",
+        "lib/net10.0/System.Security.Cryptography.Pkcs.xml",
         "lib/net462/System.Security.Cryptography.Pkcs.dll",
         "lib/net462/System.Security.Cryptography.Pkcs.xml",
         "lib/net8.0/System.Security.Cryptography.Pkcs.dll",
@@ -2077,11 +2106,13 @@
         "lib/netstandard2.0/System.Security.Cryptography.Pkcs.xml",
         "lib/netstandard2.1/System.Security.Cryptography.Pkcs.dll",
         "lib/netstandard2.1/System.Security.Cryptography.Pkcs.xml",
+        "runtimes/win/lib/net10.0/System.Security.Cryptography.Pkcs.dll",
+        "runtimes/win/lib/net10.0/System.Security.Cryptography.Pkcs.xml",
         "runtimes/win/lib/net8.0/System.Security.Cryptography.Pkcs.dll",
         "runtimes/win/lib/net8.0/System.Security.Cryptography.Pkcs.xml",
         "runtimes/win/lib/net9.0/System.Security.Cryptography.Pkcs.dll",
         "runtimes/win/lib/net9.0/System.Security.Cryptography.Pkcs.xml",
-        "system.security.cryptography.pkcs.9.0.11.nupkg.sha512",
+        "system.security.cryptography.pkcs.10.0.13.nupkg.sha512",
         "system.security.cryptography.pkcs.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -2215,7 +2246,8 @@
     "net10.0": [
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 10.0.13",
       "NorthWind.Sales.Backend.IoC >= 1.0.0",
-      "Swashbuckle.AspNetCore >= 10.3.0"
+      "Swashbuckle.AspNetCore >= 10.3.0",
+      "System.Security.Cryptography.Pkcs >= 10.0.13"
     ]
   },
   "packageFolders": {
@@ -2282,6 +2314,10 @@
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[10.3.0, )"
+          },
+          "System.Security.Cryptography.Pkcs": {
+            "target": "Package",
+            "version": "[10.0.13, )"
           }
         },
         "imports": [

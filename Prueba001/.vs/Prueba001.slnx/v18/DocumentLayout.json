@@ -1,0 +1,84 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Antonio\\source\\repos\\Prueba001\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{31DFCFF9-4B96-2E51-D3E0-5640FFCF14C1}|Prueba001.dwproj|C:\\Users\\Antonio\\source\\repos\\Prueba001\\Northwind.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{31DFCFF9-4B96-2E51-D3E0-5640FFCF14C1}|Prueba001.dwproj|solutionrelative:Northwind.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31DFCFF9-4B96-2E51-D3E0-5640FFCF14C1}|Prueba001.dwproj|C:\\Users\\Antonio\\source\\repos\\Prueba001\\Northwind.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{31DFCFF9-4B96-2E51-D3E0-5640FFCF14C1}|Prueba001.dwproj|solutionrelative:Northwind.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31DFCFF9-4B96-2E51-D3E0-5640FFCF14C1}|Prueba001.dwproj|C:\\Users\\Antonio\\source\\repos\\Prueba001\\Orders.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{31DFCFF9-4B96-2E51-D3E0-5640FFCF14C1}|Prueba001.dwproj|solutionrelative:Orders.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31DFCFF9-4B96-2E51-D3E0-5640FFCF14C1}|Prueba001.dwproj|C:\\Users\\Antonio\\source\\repos\\Prueba001\\Products.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{31DFCFF9-4B96-2E51-D3E0-5640FFCF14C1}|Prueba001.dwproj|solutionrelative:Products.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Orders.dim [Design]",
+              "DocumentMoniker": "C:\\Users\\Antonio\\source\\repos\\Prueba001\\Orders.dim",
+              "RelativeDocumentMoniker": "Orders.dim",
+              "ToolTip": "C:\\Users\\Antonio\\source\\repos\\Prueba001\\Orders.dim [Design]",
+              "RelativeToolTip": "Orders.dim [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-08-18T22:37:33.917Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Products.dim [Design]",
+              "DocumentMoniker": "C:\\Users\\Antonio\\source\\repos\\Prueba001\\Products.dim",
+              "RelativeDocumentMoniker": "Products.dim",
+              "ToolTip": "C:\\Users\\Antonio\\source\\repos\\Prueba001\\Products.dim [Design]",
+              "RelativeToolTip": "Products.dim [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-08-18T21:54:42.357Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Northwind.cube [Design]",
+              "DocumentMoniker": "C:\\Users\\Antonio\\source\\repos\\Prueba001\\Northwind.cube",
+              "RelativeDocumentMoniker": "Northwind.cube",
+              "ToolTip": "C:\\Users\\Antonio\\source\\repos\\Prueba001\\Northwind.cube [Design]",
+              "RelativeToolTip": "Northwind.cube [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-08-18T21:51:22.995Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Northwind.dsv [Design]",
+              "DocumentMoniker": "C:\\Users\\Antonio\\source\\repos\\Prueba001\\Northwind.dsv",
+              "RelativeDocumentMoniker": "Northwind.dsv",
+              "ToolTip": "C:\\Users\\Antonio\\source\\repos\\Prueba001\\Northwind.dsv [Design]",
+              "RelativeToolTip": "Northwind.dsv [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-08-18T21:43:21.372Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

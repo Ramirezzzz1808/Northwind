@@ -1,4 +1,4 @@
-﻿using NorthWind.Sales.Backend.Repositories.Entities;
+using NorthWind.Sales.Backend.Repositories.Entities;
 
 namespace NorthWind.Sales.Backend.DataContexts.EFCore.Configurations;
 
@@ -8,6 +8,9 @@ internal class ProductConfiguration : IEntityTypeConfiguration<Product>
     {
         builder.Property(p => p.Name).IsRequired().HasMaxLength(40);
         builder.Property(p => p.UnitPrice).HasPrecision(8, 2);
+
+        // Concurrencia optimista: SQL Server regenera el valor en cada UPDATE.
+        builder.Property(p => p.RowVersion).IsRowVersion();
 
         // Datos de ejemplo
         builder.HasData(

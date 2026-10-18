@@ -1,4 +1,4 @@
-﻿using NorthWind.Sales.Backend.Repositories.Entities;
+using NorthWind.Sales.Backend.Repositories.Entities;
 
 namespace NorthWind.Sales.Backend.Repositories.Interfaces;
 
@@ -9,5 +9,7 @@ public interface INorthWindSalesQueriesDataContext
     Task<ReturnType> FirstOrDefaultAsync<ReturnType>(
         IQueryable<ReturnType> queryable);
     Task<IEnumerable<ReturnType>> ToListAsync<ReturnType>(
+        IQueryable<ReturnType> queryable);
+    Task<int> CountAsync<ReturnType>(
         IQueryable<ReturnType> queryable);
 }

@@ -31,3 +31,4 @@ C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Backend.DataContexts.EFC
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\bin\Debug\net10.0\NorthWind.DomainLogs.Entities.pdb
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\bin\Debug\net10.0\NorthWind.Transactions.Entities.dll
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\bin\Debug\net10.0\NorthWind.Transactions.Entities.pdb
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\obj\Debug\net10.0\NorthWind.Sales.Backend.DataContexts.EFCore.sourcelink.json

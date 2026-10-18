@@ -7,6 +7,7 @@
 
 	<ItemGroup>
 		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+		<PackageReference Include="System.Security.Cryptography.Pkcs" Version="10.0.13" />
 		<ProjectReference Include="..\NorthWind.Sales.Backend.BusinessObjects\NorthWind.Sales.Backend.BusinessObjects.csproj" />
 	</ItemGroup>
 </Project>

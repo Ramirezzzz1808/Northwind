@@ -1,0 +1,8 @@
+C:\Users\Antonio\source\repos\Tab_6to_ventasXinter\bin\Model.asdatabase
+C:\Users\Antonio\source\repos\Tab_6to_ventasXinter\bin\Model.deploymenttargets
+C:\Users\Antonio\source\repos\Tab_6to_ventasXinter\bin\Model.deploymentoptions
+C:\Users\Antonio\source\repos\Tab_6to_ventasXinter\obj\Development\Tab_6to_ventasXinter.smproj.AssemblyReference.cache
+C:\Users\Antonio\source\repos\Tab_6to_ventasXinter\obj\Development\Tab_6to_ventasXinter.smproj.CoreCompileInputs.cache
+C:\Users\Antonio\source\repos\Tab_6to_ventasXinter\obj\Development\Model.asdatabase
+C:\Users\Antonio\source\repos\Tab_6to_ventasXinter\obj\Development\Model.deploymentoptions
+C:\Users\Antonio\source\repos\Tab_6to_ventasXinter\obj\Development\Model.deploymenttargets

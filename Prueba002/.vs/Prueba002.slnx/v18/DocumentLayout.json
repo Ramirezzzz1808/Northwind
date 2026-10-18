@@ -1,0 +1,110 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Antonio\\source\\repos\\Prueba002\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FB7A6520-C6F5-9C54-D1C7-6AA41AA77015}|Prueba002.dwproj|C:\\Users\\Antonio\\source\\repos\\Prueba002\\Adventure Works DW2025.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{FB7A6520-C6F5-9C54-D1C7-6AA41AA77015}|Prueba002.dwproj|solutionrelative:Adventure Works DW2025.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB7A6520-C6F5-9C54-D1C7-6AA41AA77015}|Prueba002.dwproj|C:\\Users\\Antonio\\source\\repos\\Prueba002\\Dim Customer.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{FB7A6520-C6F5-9C54-D1C7-6AA41AA77015}|Prueba002.dwproj|solutionrelative:Dim Customer.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB7A6520-C6F5-9C54-D1C7-6AA41AA77015}|Prueba002.dwproj|C:\\Users\\Antonio\\source\\repos\\Prueba002\\Fact Internet Sales.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{FB7A6520-C6F5-9C54-D1C7-6AA41AA77015}|Prueba002.dwproj|solutionrelative:Fact Internet Sales.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB7A6520-C6F5-9C54-D1C7-6AA41AA77015}|Prueba002.dwproj|C:\\Users\\Antonio\\source\\repos\\Prueba002\\Dim Date.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{FB7A6520-C6F5-9C54-D1C7-6AA41AA77015}|Prueba002.dwproj|solutionrelative:Dim Date.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB7A6520-C6F5-9C54-D1C7-6AA41AA77015}|Prueba002.dwproj|C:\\Users\\Antonio\\source\\repos\\Prueba002\\Adventure Works DW2025.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{FB7A6520-C6F5-9C54-D1C7-6AA41AA77015}|Prueba002.dwproj|solutionrelative:Adventure Works DW2025.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Fact Internet Sales.dim [Design]",
+              "DocumentMoniker": "C:\\Users\\Antonio\\source\\repos\\Prueba002\\Fact Internet Sales.dim",
+              "RelativeDocumentMoniker": "Fact Internet Sales.dim",
+              "ToolTip": "C:\\Users\\Antonio\\source\\repos\\Prueba002\\Fact Internet Sales.dim [Design]",
+              "RelativeToolTip": "Fact Internet Sales.dim [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-09-01T22:04:55.448Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Dim Date.dim [Design]",
+              "DocumentMoniker": "C:\\Users\\Antonio\\source\\repos\\Prueba002\\Dim Date.dim",
+              "RelativeDocumentMoniker": "Dim Date.dim",
+              "ToolTip": "C:\\Users\\Antonio\\source\\repos\\Prueba002\\Dim Date.dim [Design]",
+              "RelativeToolTip": "Dim Date.dim [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-08-27T21:18:54.976Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Dim Customer.dim [Design]",
+              "DocumentMoniker": "C:\\Users\\Antonio\\source\\repos\\Prueba002\\Dim Customer.dim",
+              "RelativeDocumentMoniker": "Dim Customer.dim",
+              "ToolTip": "C:\\Users\\Antonio\\source\\repos\\Prueba002\\Dim Customer.dim [Design]",
+              "RelativeToolTip": "Dim Customer.dim [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-08-26T21:23:37.387Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Adventure Works DW2025.cube [Design]",
+              "DocumentMoniker": "C:\\Users\\Antonio\\source\\repos\\Prueba002\\Adventure Works DW2025.cube",
+              "RelativeDocumentMoniker": "Adventure Works DW2025.cube",
+              "ToolTip": "C:\\Users\\Antonio\\source\\repos\\Prueba002\\Adventure Works DW2025.cube [Design]",
+              "RelativeToolTip": "Adventure Works DW2025.cube [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-08-25T23:24:29.476Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Adventure Works DW2025.dsv [Design]",
+              "DocumentMoniker": "C:\\Users\\Antonio\\source\\repos\\Prueba002\\Adventure Works DW2025.dsv",
+              "RelativeDocumentMoniker": "Adventure Works DW2025.dsv",
+              "ToolTip": "C:\\Users\\Antonio\\source\\repos\\Prueba002\\Adventure Works DW2025.dsv [Design]",
+              "RelativeToolTip": "Adventure Works DW2025.dsv [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-08-25T23:22:26.499Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

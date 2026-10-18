@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "DHPSzOZP7FQ=",
+  "dgSpecHash": "/1WJpBMfIZ8=",
   "success": true,
   "projectFilePath": "C:\\Users\\Antonio\\source\\repos\\NorthWind\\NorthWind.Result.Entities\\NorthWind.Result.Entities.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Antonio\\.nuget\\packages\\system.security.cryptography.pkcs\\10.0.13\\system.security.cryptography.pkcs.10.0.13.nupkg.sha512"
+  ],
   "logs": []
 }

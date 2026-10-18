@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NorthWind.ValidationService.FluentValidation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+80243a2ae64d2f63c4cd45a16608bd9d58b0013d")]
 [assembly: System.Reflection.AssemblyProductAttribute("NorthWind.ValidationService.FluentValidation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NorthWind.ValidationService.FluentValidation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,4 +1,4 @@
-﻿using NorthWind.Sales.Backend.Repositories.Entities;
+using NorthWind.Sales.Backend.Repositories.Entities;
 
 namespace NorthWind.Sales.Backend.DataContexts.EFCore.Services;
 
@@ -21,4 +21,8 @@ internal class NorthWindSalesQueriesDataContext
     public async Task<IEnumerable<ReturnType>> ToListAsync<ReturnType>(
         IQueryable<ReturnType> queryable) =>
         await queryable.ToListAsync();
+
+    public Task<int> CountAsync<ReturnType>(
+        IQueryable<ReturnType> queryable) =>
+        queryable.CountAsync();
 }

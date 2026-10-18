@@ -9,7 +9,8 @@
       "NorthWind.RazorComponents/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Components.Web": "10.0.12",
-          "NorthWind.Validation.Entities": "1.0.0"
+          "NorthWind.Validation.Entities": "1.0.0",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "runtime": {
           "NorthWind.RazorComponents.dll": {}
@@ -220,9 +221,26 @@
           }
         }
       },
+      "System.Security.Cryptography.Pkcs/10.0.13": {
+        "runtime": {
+          "lib/net10.0/System.Security.Cryptography.Pkcs.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.1326.50504"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net10.0/System.Security.Cryptography.Pkcs.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.1326.50504"
+          }
+        }
+      },
       "NorthWind.Validation.Entities/1.0.0": {
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.12"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.12",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "runtime": {
           "NorthWind.Validation.Entities.dll": {
@@ -364,6 +382,13 @@
       "sha512": "sha512-bLgqhSs2YS3i2sOe8Mo11JzgdktB+/VADJXx2oSCE1crpg3RbFESn1mEBfiO4MjX9icW+An1zdGBFucIwIYwmA==",
       "path": "microsoft.jsinterop/10.0.12",
       "hashPath": "microsoft.jsinterop.10.0.12.nupkg.sha512"
+    },
+    "System.Security.Cryptography.Pkcs/10.0.13": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-a+EovgC1fBnwdlQ6cn3j4JFBfKqiFaFvoAhjisOoSvazLAcIznaBzPQP0oYnvccmeXfqUH1KebVZOxSeH6rMaw==",
+      "path": "system.security.cryptography.pkcs/10.0.13",
+      "hashPath": "system.security.cryptography.pkcs.10.0.13.nupkg.sha512"
     },
     "NorthWind.Validation.Entities/1.0.0": {
       "type": "project",

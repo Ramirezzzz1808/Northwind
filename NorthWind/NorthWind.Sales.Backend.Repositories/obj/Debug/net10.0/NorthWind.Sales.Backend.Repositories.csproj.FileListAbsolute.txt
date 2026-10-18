@@ -27,3 +27,4 @@ C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Backend.Repositories\bin
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Backend.Repositories\bin\Debug\net10.0\NorthWind.DomainLogs.Entities.pdb
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Backend.Repositories\bin\Debug\net10.0\NorthWind.Transactions.Entities.dll
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Backend.Repositories\bin\Debug\net10.0\NorthWind.Transactions.Entities.pdb
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Backend.Repositories\obj\Debug\net10.0\NorthWind.Sales.Backend.Repositories.sourcelink.json

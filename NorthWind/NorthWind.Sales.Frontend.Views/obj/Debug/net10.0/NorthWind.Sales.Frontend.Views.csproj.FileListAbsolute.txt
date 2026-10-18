@@ -46,3 +46,4 @@ C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net10.0\ref\NorthWind.Sales.Frontend.Views.dll
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net10.0\NorthWind.Validation.Entities.dll
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net10.0\NorthWind.Validation.Entities.pdb
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net10.0\NorthWind.Sales.Frontend.Views.sourcelink.json

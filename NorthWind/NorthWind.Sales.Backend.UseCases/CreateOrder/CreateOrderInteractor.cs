@@ -1,4 +1,4 @@
-﻿using NorthWind.Entities.Guards;
+using NorthWind.Entities.Guards;
 using NorthWind.Entities.Interfaces;
 using NorthWind.Sales.Backend.BusinessObjects.Specifications;
 
@@ -7,6 +7,7 @@ namespace NorthWind.Sales.Backend.UseCases.CreateOrder;
 internal class CreateOrderInteractor(
     ICreateOrderOutputPort outputPort,
     ICommandsRepository repository,
+    IQueriesRepository queriesRepository,
     IModelValidatorHub<CreateOrderDto> modelValidatorHub,
     IDomainEventHub<SpecialOrderCreatedEvent> domainEventHub,
     IDomainLogger domainLogger,
@@ -24,7 +25,11 @@ internal class CreateOrderInteractor(
             CreateOrderMessages.StartingPurchaseOrderCreation,
             userService.UserName));
 
-        OrderAggregate Order = OrderAggregate.From(orderDto);
+        // El precio nunca se toma del cliente: se usa el del catálogo.
+        CreateOrderDto TrustedOrderDto =
+            await ApplyCatalogPrices(orderDto);
+
+        OrderAggregate Order = OrderAggregate.From(TrustedOrderDto);
 
         try
         {
@@ -63,5 +68,25 @@ internal class CreateOrderInteractor(
 
             throw;
         }
+    }
+
+    async Task<CreateOrderDto> ApplyCatalogPrices(CreateOrderDto orderDto)
+    {
+        IDictionary<int, decimal> CatalogPrices =
+            await queriesRepository.GetProductsUnitPrices(
+                orderDto.OrderDetails.Select(d => d.ProductId));
+
+        IEnumerable<CreateOrderDetailDto> Details = orderDto.OrderDetails
+            .Select(d => new CreateOrderDetailDto(
+                d.ProductId, CatalogPrices[d.ProductId], d.Quantity))
+            .ToList();
+
+        return new CreateOrderDto(
+            orderDto.CustomerId,
+            orderDto.ShipAddress,
+            orderDto.ShipCity,
+            orderDto.ShipCountry,
+            orderDto.ShipPostalCode,
+            Details);
     }
 }

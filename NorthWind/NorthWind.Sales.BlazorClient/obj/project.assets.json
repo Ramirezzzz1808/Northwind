@@ -691,11 +691,34 @@
           "lib/net10.0/NorthWind.Membership.Frontend.RazorViews.dll": {}
         }
       },
+      "System.Security.Cryptography.Pkcs/10.0.13": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/System.Security.Cryptography.Pkcs.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/System.Security.Cryptography.Pkcs.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net10.0/System.Security.Cryptography.Pkcs.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "NorthWind.HttpDelegatingHandlers/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
-          "NorthWind.Validation.Entities": "1.0.0"
+          "NorthWind.Validation.Entities": "1.0.0",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "compile": {
           "bin/placeholder/NorthWind.HttpDelegatingHandlers.dll": {}
@@ -709,7 +732,8 @@
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
           "Microsoft.AspNetCore.Components.Web": "10.0.12",
-          "NorthWind.Validation.Entities": "1.0.0"
+          "NorthWind.Validation.Entities": "1.0.0",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "compile": {
           "bin/placeholder/NorthWind.RazorComponents.dll": {}
@@ -721,6 +745,9 @@
       "NorthWind.Sales.Entities/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "System.Security.Cryptography.Pkcs": "10.0.13"
+        },
         "compile": {
           "bin/placeholder/NorthWind.Sales.Entities.dll": {}
         },
@@ -732,7 +759,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
-          "NorthWind.Sales.Entities": "1.0.0"
+          "NorthWind.Sales.Entities": "1.0.0",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "compile": {
           "bin/placeholder/NorthWind.Sales.Frontend.BusinessObjects.dll": {}
@@ -749,7 +777,8 @@
           "NorthWind.Sales.Frontend.Views": "1.0.0",
           "NorthWind.Sales.Frontend.WebApiGateways": "1.0.0",
           "NorthWind.Sales.Validators.Entities": "1.0.0",
-          "NorthWind.ValidationService.FluentValidation": "1.0.0"
+          "NorthWind.ValidationService.FluentValidation": "1.0.0",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "compile": {
           "bin/placeholder/NorthWind.Sales.Frontend.IoC.dll": {}
@@ -765,7 +794,8 @@
           "Microsoft.AspNetCore.Components.Web": "10.0.12",
           "NorthWind.Membership.Frontend.RazorViews": "1.0.0",
           "NorthWind.RazorComponents": "1.0.0",
-          "NorthWind.Sales.Frontend.BusinessObjects": "1.0.0"
+          "NorthWind.Sales.Frontend.BusinessObjects": "1.0.0",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "compile": {
           "bin/placeholder/NorthWind.Sales.Frontend.Views.dll": {}
@@ -781,7 +811,8 @@
           "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.12",
           "Microsoft.Extensions.Http": "10.0.12",
           "NorthWind.HttpDelegatingHandlers": "1.0.0",
-          "NorthWind.Sales.Frontend.BusinessObjects": "1.0.0"
+          "NorthWind.Sales.Frontend.BusinessObjects": "1.0.0",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "compile": {
           "bin/placeholder/NorthWind.Sales.Frontend.WebApiGateways.dll": {}
@@ -795,7 +826,8 @@
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
           "NorthWind.Sales.Entities": "1.0.0",
-          "NorthWind.Validation.Entities": "1.0.0"
+          "NorthWind.Validation.Entities": "1.0.0",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "compile": {
           "bin/placeholder/NorthWind.Sales.Validators.Entities.dll": {}
@@ -808,7 +840,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.12"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.12",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "compile": {
           "bin/placeholder/NorthWind.Validation.Entities.dll": {}
@@ -822,7 +855,8 @@
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
           "FluentValidation": "12.1.1",
-          "NorthWind.Validation.Entities": "1.0.0"
+          "NorthWind.Validation.Entities": "1.0.0",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "compile": {
           "bin/placeholder/NorthWind.ValidationService.FluentValidation.dll": {}
@@ -1522,11 +1556,28 @@
           "lib/net10.0/NorthWind.Membership.Frontend.RazorViews.dll": {}
         }
       },
+      "System.Security.Cryptography.Pkcs/10.0.13": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/System.Security.Cryptography.Pkcs.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/System.Security.Cryptography.Pkcs.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
       "NorthWind.HttpDelegatingHandlers/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
-          "NorthWind.Validation.Entities": "1.0.0"
+          "NorthWind.Validation.Entities": "1.0.0",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "compile": {
           "bin/placeholder/NorthWind.HttpDelegatingHandlers.dll": {}
@@ -1540,7 +1591,8 @@
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
           "Microsoft.AspNetCore.Components.Web": "10.0.12",
-          "NorthWind.Validation.Entities": "1.0.0"
+          "NorthWind.Validation.Entities": "1.0.0",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "compile": {
           "bin/placeholder/NorthWind.RazorComponents.dll": {}
@@ -1552,6 +1604,9 @@
       "NorthWind.Sales.Entities/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "System.Security.Cryptography.Pkcs": "10.0.13"
+        },
         "compile": {
           "bin/placeholder/NorthWind.Sales.Entities.dll": {}
         },
@@ -1563,7 +1618,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
-          "NorthWind.Sales.Entities": "1.0.0"
+          "NorthWind.Sales.Entities": "1.0.0",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "compile": {
           "bin/placeholder/NorthWind.Sales.Frontend.BusinessObjects.dll": {}
@@ -1580,7 +1636,8 @@
           "NorthWind.Sales.Frontend.Views": "1.0.0",
           "NorthWind.Sales.Frontend.WebApiGateways": "1.0.0",
           "NorthWind.Sales.Validators.Entities": "1.0.0",
-          "NorthWind.ValidationService.FluentValidation": "1.0.0"
+          "NorthWind.ValidationService.FluentValidation": "1.0.0",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "compile": {
           "bin/placeholder/NorthWind.Sales.Frontend.IoC.dll": {}
@@ -1596,7 +1653,8 @@
           "Microsoft.AspNetCore.Components.Web": "10.0.12",
           "NorthWind.Membership.Frontend.RazorViews": "1.0.0",
           "NorthWind.RazorComponents": "1.0.0",
-          "NorthWind.Sales.Frontend.BusinessObjects": "1.0.0"
+          "NorthWind.Sales.Frontend.BusinessObjects": "1.0.0",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "compile": {
           "bin/placeholder/NorthWind.Sales.Frontend.Views.dll": {}
@@ -1612,7 +1670,8 @@
           "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.12",
           "Microsoft.Extensions.Http": "10.0.12",
           "NorthWind.HttpDelegatingHandlers": "1.0.0",
-          "NorthWind.Sales.Frontend.BusinessObjects": "1.0.0"
+          "NorthWind.Sales.Frontend.BusinessObjects": "1.0.0",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "compile": {
           "bin/placeholder/NorthWind.Sales.Frontend.WebApiGateways.dll": {}
@@ -1626,7 +1685,8 @@
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
           "NorthWind.Sales.Entities": "1.0.0",
-          "NorthWind.Validation.Entities": "1.0.0"
+          "NorthWind.Validation.Entities": "1.0.0",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "compile": {
           "bin/placeholder/NorthWind.Sales.Validators.Entities.dll": {}
@@ -1639,7 +1699,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.12"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.12",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "compile": {
           "bin/placeholder/NorthWind.Validation.Entities.dll": {}
@@ -1653,7 +1714,8 @@
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
           "FluentValidation": "12.1.1",
-          "NorthWind.Validation.Entities": "1.0.0"
+          "NorthWind.Validation.Entities": "1.0.0",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "compile": {
           "bin/placeholder/NorthWind.ValidationService.FluentValidation.dll": {}
@@ -2899,6 +2961,42 @@
         "northwind.membership.frontend.razorviews.nuspec"
       ]
     },
+    "System.Security.Cryptography.Pkcs/10.0.13": {
+      "sha512": "a+EovgC1fBnwdlQ6cn3j4JFBfKqiFaFvoAhjisOoSvazLAcIznaBzPQP0oYnvccmeXfqUH1KebVZOxSeH6rMaw==",
+      "type": "package",
+      "path": "system.security.cryptography.pkcs/10.0.13",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Security.Cryptography.Pkcs.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Security.Cryptography.Pkcs.targets",
+        "lib/net10.0/System.Security.Cryptography.Pkcs.dll",
+        "lib/net10.0/System.Security.Cryptography.Pkcs.xml",
+        "lib/net462/System.Security.Cryptography.Pkcs.dll",
+        "lib/net462/System.Security.Cryptography.Pkcs.xml",
+        "lib/net8.0/System.Security.Cryptography.Pkcs.dll",
+        "lib/net8.0/System.Security.Cryptography.Pkcs.xml",
+        "lib/net9.0/System.Security.Cryptography.Pkcs.dll",
+        "lib/net9.0/System.Security.Cryptography.Pkcs.xml",
+        "lib/netstandard2.0/System.Security.Cryptography.Pkcs.dll",
+        "lib/netstandard2.0/System.Security.Cryptography.Pkcs.xml",
+        "lib/netstandard2.1/System.Security.Cryptography.Pkcs.dll",
+        "lib/netstandard2.1/System.Security.Cryptography.Pkcs.xml",
+        "runtimes/win/lib/net10.0/System.Security.Cryptography.Pkcs.dll",
+        "runtimes/win/lib/net10.0/System.Security.Cryptography.Pkcs.xml",
+        "runtimes/win/lib/net8.0/System.Security.Cryptography.Pkcs.dll",
+        "runtimes/win/lib/net8.0/System.Security.Cryptography.Pkcs.xml",
+        "runtimes/win/lib/net9.0/System.Security.Cryptography.Pkcs.dll",
+        "runtimes/win/lib/net9.0/System.Security.Cryptography.Pkcs.xml",
+        "system.security.cryptography.pkcs.10.0.13.nupkg.sha512",
+        "system.security.cryptography.pkcs.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "NorthWind.HttpDelegatingHandlers/1.0.0": {
       "type": "project",
       "path": "../NorthWind.HttpDelegatingHandlers/NorthWind.HttpDelegatingHandlers.csproj",
@@ -2957,7 +3055,8 @@
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 10.0.12",
       "Microsoft.NET.ILLink.Tasks >= 10.0.12",
       "Microsoft.NET.Sdk.WebAssembly.Pack >= 10.0.12",
-      "NorthWind.Sales.Frontend.IoC >= 1.0.0"
+      "NorthWind.Sales.Frontend.IoC >= 1.0.0",
+      "System.Security.Cryptography.Pkcs >= 10.0.13"
     ]
   },
   "packageFolders": {
@@ -3043,6 +3142,10 @@
             "target": "Package",
             "version": "[10.0.12, )",
             "autoReferenced": true
+          },
+          "System.Security.Cryptography.Pkcs": {
+            "target": "Package",
+            "version": "[10.0.13, )"
           }
         },
         "imports": [

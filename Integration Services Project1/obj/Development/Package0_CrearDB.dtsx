@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/7/2026 4:29:00 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LENOVOAP"
+  DTS:CreatorName="LENOVOAP\Antonio"
+  DTS:DTSID="{F2048D3E-F65B-4E0C-B150-0F90A86B8D7A}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1016.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package0_CrearDB"
+  DTS:PackageType="5"
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{11B04DA8-9A65-4CA9-A9C9-ED3BFD07E990}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LENOVOAP\SOPORTE_M_1BD.master.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{FF76EC70-A77E-4F5D-A1F5-2F118DA6919C}"
+      DTS:ObjectName="LENOVOAP\SOPORTE_M_1BD.master.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=LENOVOAP\SOPORTE_M_1BD;User ID=sa;Initial Catalog=master;Provider=MSOLEDBSQL.1;Application Name=SSIS-Package0_CrearDB-{FF76EC70-A77E-4F5D-A1F5-2F118DA6919C}LENOVOAP\SOPORTE_M_1BD.master.sa;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAT/P2S9WG3kicHEO/9VvNDAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAb6M3/ErTlR98/4gu0P54zSWqXccTXWipk4BrVEE4cngAAAAAOgAAAAAIAACAAAACJww0i8aoU6+SMbPQIuBnnD5jognQvOcozTruWsZLG8hAAAAAODRqgbN423FDJovNCy0IUQAAAAKmikbHltPvb4qbCpeW0N11scxc4YEYk3BERJudWWDgcldAdzNBCWyM03O5XujhHXD83kGYEBtdg89AYP7wUyfg</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost\SOPORTE_M_1BD.AdventureWorks2025.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{530C1C4A-A238-42A3-B69B-B46DC7E166B5}"
+      DTS:ObjectName="localhost\SOPORTE_M_1BD.AdventureWorks2025.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost\SOPORTE_M_1BD;User ID=sa;Initial Catalog=AdventureWorks2025;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-Package0_CrearDB-{530C1C4A-A238-42A3-B69B-B46DC7E166B5}localhost\SOPORTE_M_1BD.AdventureWorks2025.sa;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAT/P2S9WG3kicHEO/9VvNDAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADBjVh2Z8FDNUTqXf1TkhN1MH+JOn+MGrp5EknJOAVzPAAAAAAOgAAAAAIAACAAAAA6BqRoaLAsq7yLcXdiqv4aiGSF1bvHq4Q++Sn/LgdkphAAAAAMbFZolglehdJlC9gU6AM9QAAAAKMS2X/+pBo6ux3vajPMAD9KFiequI9lcRGwlR+KNcdO2fPfXx4slWEao02JbYVg8clQbBaq3DeFGVBVQO12SkU</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost\SOPORTE_M_1BD.DescuentosDW6to.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{81E99ECF-46CA-492B-8503-318E5386029F}"
+      DTS:ObjectName="localhost\SOPORTE_M_1BD.DescuentosDW6to.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost\SOPORTE_M_1BD;User ID=sa;Initial Catalog=DescuentosDW6to;Provider=MSOLEDBSQL.1;Application Name=SSIS-Package0_CrearDB-{81E99ECF-46CA-492B-8503-318E5386029F}localhost\SOPORTE_M_1BD.DescuentosDW6to.sa;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAT/P2S9WG3kicHEO/9VvNDAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADFNI0lahaGetRenXkaGjapfEqtt82OowLue92OVdbAvAAAAAAOgAAAAAIAACAAAAADez9vT6OT3zviAB9WgcUQEF8meIuxhQTUDd3xZpQ0MxAAAACkFLoTT1GXhtNw/urUZ3JqQAAAAD3mQadyiH6YS23ApFtm6106fCHzYqsDnaaBUp3KO2TNkuLN+vcWNY2Sg9S/elW/rV1nFf8ZvPqfIwCWa0Zt24w</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{157AEB3D-6700-4B2A-9ACD-03DB9DE54B3F}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{FF76EC70-A77E-4F5D-A1F5-2F118DA6919C}"
+          SQLTask:SqlStatementSource="IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = N'DescuentosDW6to')&#xA;BEGIN&#xA;    CREATE DATABASE [DescuentosDW6to];&#xA;END" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task 1"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{e694406d-1f4b-4da5-94c6-4c5151fa6b56}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task 1"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{81E99ECF-46CA-492B-8503-318E5386029F}"
+          SQLTask:SqlStatementSource="-----------------------------------------------------------&#xA;-- ELIMINAR TABLAS SI YA EXISTEN (EN ORDEN DE DEPENDENCIAS)&#xA;-----------------------------------------------------------&#xA;DROP TABLE IF EXISTS dbo.factVentas;&#xA;DROP TABLE IF EXISTS dbo.dimProductos;&#xA;DROP TABLE IF EXISTS dbo.dimSubCategorias;&#xA;DROP TABLE IF EXISTS dbo.dimCategorias;&#xA;DROP TABLE IF EXISTS dbo.dimModelos;&#xA;DROP TABLE IF EXISTS dbo.dimClientes;&#xA;DROP TABLE IF EXISTS dbo.dimFechas;&#xA;&#xA;&#xA;-----------------------------------------------------------&#xA;-- DIMENSIONES&#xA;-----------------------------------------------------------&#xA;CREATE TABLE dbo.dimCategorias(&#xA;    CategoriaID INT NOT NULL,&#xA;    Categoria VARCHAR(50) NULL,&#xA;    CONSTRAINT PK_dimCategorias PRIMARY KEY CLUSTERED (CategoriaID ASC)&#xA;);&#xA;&#xA;CREATE TABLE dbo.dimSubCategorias(&#xA;    SubCategoriaID INT NOT NULL,&#xA;    SubCategoria VARCHAR(50) NULL,&#xA;    categoriaId INT NULL,&#xA;    CONSTRAINT PK_dimSubCategorias PRIMARY KEY CLUSTERED (SubCategoriaID ASC),&#xA;    CONSTRAINT FK_dimSubCategorias_dimCategorias &#xA;        FOREIGN KEY (categoriaId) REFERENCES dbo.dimCategorias (CategoriaID)&#xA;);&#xA;&#xA;CREATE TABLE dbo.dimModelos(&#xA;    ModeloID INT NOT NULL,&#xA;    Modelo VARCHAR(50) NULL,&#xA;    CONSTRAINT PK_dimModelos PRIMARY KEY CLUSTERED (ModeloID ASC)&#xA;);&#xA;&#xA;CREATE TABLE dbo.dimProductos(&#xA;    ProductoID INT NOT NULL,&#xA;    SubCategoriaID INT NOT NULL,&#xA;    ModeloID INT NOT NULL,&#xA;    Producto VARCHAR(50) NOT NULL,&#xA;    CONSTRAINT PK_dimProductos PRIMARY KEY CLUSTERED (ProductoID ASC),&#xA;    CONSTRAINT FK_dimProductos_dimSubCategorias &#xA;        FOREIGN KEY (SubCategoriaID) REFERENCES dbo.dimSubCategorias (SubCategoriaID),&#xA;    CONSTRAINT FK_dimProductos_dimModelos &#xA;        FOREIGN KEY (ModeloID) REFERENCES dbo.dimModelos (ModeloID)&#xA;);&#xA;&#xA;CREATE TABLE dbo.dimClientes(&#xA;    ClienteID INT NOT NULL,&#xA;    Cliente VARCHAR(50) NULL,&#xA;    Tipo CHAR(2) NULL,&#xA;    CONSTRAINT PK_dimClientes PRIMARY KEY CLUSTERED (ClienteID ASC)&#xA;);&#xA;&#xA;CREATE TABLE dbo.dimFechas(&#xA;    FechaID INT NOT NULL,&#xA;    Anio SMALLINT NOT NULL,&#xA;    Trimestre VARCHAR(12) NOT NULL,&#xA;    Mes VARCHAR(12) NOT NULL,&#xA;    Fecha DATE NOT NULL,&#xA;    CONSTRAINT PK_dimFechas PRIMARY KEY CLUSTERED (FechaID ASC)&#xA;);&#xA;&#xA;&#xA;-----------------------------------------------------------&#xA;-- TABLA DE HECHOS&#xA;-----------------------------------------------------------&#xA;CREATE TABLE dbo.factVentas(&#xA;    VentaID INT NOT NULL,&#xA;    ClienteID INT NULL,&#xA;    ProductoId INT NULL,&#xA;    FechaID INT NULL,&#xA;    Cantidad SMALLINT NOT NULL,&#xA;    PrecioUnitario MONEY NOT NULL,&#xA;    Descuento MONEY NOT NULL,&#xA;    DescuentoTotal MONEY NOT NULL,&#xA;    CONSTRAINT PK_factVentas PRIMARY KEY CLUSTERED (VentaID ASC),&#xA;    CONSTRAINT FK_factVentas_dimClientes &#xA;        FOREIGN KEY (ClienteID) REFERENCES dbo.dimClientes (ClienteID),&#xA;    CONSTRAINT FK_factVentas_dimProductos &#xA;        FOREIGN KEY (ProductoId) REFERENCES dbo.dimProductos (ProductoID),&#xA;    CONSTRAINT FK_factVentas_dimFechas &#xA;        FOREIGN KEY (FechaID) REFERENCES dbo.dimFechas (FechaID)&#xA;);&#xA;&#xA;&#xA;-----------------------------------------------------------&#xA;-- VERIFICACIÓN DE FKs&#xA;-----------------------------------------------------------&#xA;SELECT &#xA;    fk.name AS NombreRelacion_FK,&#xA;    tp.name AS TablaPadre_Dimension,&#xA;    ref.name AS TablaHijo_Referenciada&#xA;FROM sys.foreign_keys fk&#xA;INNER JOIN sys.tables tp ON fk.referenced_object_id = tp.object_id&#xA;INNER JOIN sys.tables ref ON fk.parent_object_id = ref.object_id;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{1B98E208-0C83-46D4-B38B-3E70635ED168}"
+      DTS:From="Package\Execute SQL Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Execute SQL Task 1" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\Execute SQL Task"
+          TopLeft="251.428571963797,195.764705710758" />
+        <NodeLayout
+          Size="172,41.6"
+          Id="Package\Execute SQL Task 1"
+          TopLeft="247.857143384766,253.117646836956" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="251.428571963797,216.564705710758">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-3.57142857903136,57.3529411261981"
+              Start="0,0"
+              End="-11.0714285790314,57.3529411261981">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-22.0714285790314,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-22.0714285790314,0"
+                    Point2="-26.0714285790314,0"
+                    Point3="-26.0714285790314,4" />
+                  <mssgle:LineSegment
+                    End="-26.0714285790314,53.3529411261981" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-26.0714285790314,53.3529411261981"
+                    Point2="-26.0714285790314,57.3529411261981"
+                    Point3="-22.0714285790314,57.3529411261981" />
+                  <mssgle:LineSegment
+                    End="-11.0714285790314,57.3529411261981" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

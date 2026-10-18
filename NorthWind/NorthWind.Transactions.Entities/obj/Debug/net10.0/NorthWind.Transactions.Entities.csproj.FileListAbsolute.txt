@@ -11,3 +11,4 @@ C:\Users\Antonio\source\repos\NorthWind\NorthWind.Transactions.Entities\obj\Debu
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Transactions.Entities\obj\Debug\net10.0\NorthWind.Transactions.Entities.pdb
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Transactions.Entities\obj\Debug\net10.0\ref\NorthWind.Transactions.Entities.dll
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Transactions.Entities\obj\Debug\net10.0\NorthWin.0E75BBA7.Up2Date
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Transactions.Entities\obj\Debug\net10.0\NorthWind.Transactions.Entities.sourcelink.json

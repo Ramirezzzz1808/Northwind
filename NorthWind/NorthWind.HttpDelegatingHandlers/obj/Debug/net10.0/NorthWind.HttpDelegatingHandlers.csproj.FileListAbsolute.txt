@@ -13,3 +13,4 @@ C:\Users\Antonio\source\repos\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Deb
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net10.0\refint\NorthWind.HttpDelegatingHandlers.dll
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net10.0\NorthWind.HttpDelegatingHandlers.pdb
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net10.0\ref\NorthWind.HttpDelegatingHandlers.dll
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net10.0\NorthWind.HttpDelegatingHandlers.sourcelink.json

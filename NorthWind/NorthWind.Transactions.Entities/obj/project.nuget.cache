@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "19Bw/HdTn5U=",
+  "dgSpecHash": "x2SsCFn0Gw0=",
   "success": true,
   "projectFilePath": "C:\\Users\\Antonio\\source\\repos\\NorthWind\\NorthWind.Transactions.Entities\\NorthWind.Transactions.Entities.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Antonio\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.12\\microsoft.extensions.dependencyinjection.abstractions.10.0.12.nupkg.sha512"
+    "C:\\Users\\Antonio\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.12\\microsoft.extensions.dependencyinjection.abstractions.10.0.12.nupkg.sha512",
+    "C:\\Users\\Antonio\\.nuget\\packages\\system.security.cryptography.pkcs\\10.0.13\\system.security.cryptography.pkcs.10.0.13.nupkg.sha512"
   ],
   "logs": []
 }

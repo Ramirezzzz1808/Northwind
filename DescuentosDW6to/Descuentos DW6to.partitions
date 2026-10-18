@@ -1,0 +1,680 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="b14858da-ee26-42b9-adaf-bfb1c2b146d2" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Descuentos DW6to</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Dim Categorias</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="0e4950d2-561d-4cf4-8122-f5a6170eaab7">
+          <ID>Dim Categorias</ID>
+          <Name>Dim Categorias</Name>
+          <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="2a881f30-c5fd-4103-9d95-8c13fe3ff3ef">
+            <DataSourceViewID>Descuentos DW6to</DataSourceViewID>
+            <TableID>dbo_dimCategorias</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Dim Clientes</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="d07c0f76-41ec-4c26-b6b4-8bf4e8e347ce">
+          <ID>Dim Clientes</ID>
+          <Name>Dim Clientes</Name>
+          <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="7ef88368-5f6e-409e-8500-6dd0a0c65d2e">
+            <DataSourceViewID>Descuentos DW6to</DataSourceViewID>
+            <TableID>dbo_dimClientes</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Dim Modelos</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="b722cef5-6c44-4dda-a55b-249ae251233c">
+          <ID>Dim Modelos</ID>
+          <Name>Dim Modelos</Name>
+          <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="1438572d-52a4-42eb-983c-f0f9d003b2e5">
+            <DataSourceViewID>Descuentos DW6to</DataSourceViewID>
+            <TableID>dbo_dimModelos</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Dim Fechas</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="a77c6848-2726-4a32-804b-00fe5ffde3dc">
+          <ID>Dim Fechas</ID>
+          <Name>Dim Fechas</Name>
+          <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="4bfc5fae-cf49-4006-978b-964a8b047366">
+            <DataSourceViewID>Descuentos DW6to</DataSourceViewID>
+            <TableID>dbo_dimFechas</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Dim Productos</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="c96d704e-6078-4e5b-a4e8-2965e5b5a2dd">
+          <ID>Dim Productos</ID>
+          <Name>Dim Productos</Name>
+          <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="b2267d1f-591b-4a06-ae32-eb030e9199d9">
+            <DataSourceViewID>Descuentos DW6to</DataSourceViewID>
+            <TableID>dbo_dimProductos</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Dim Sub Categorias</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="f559aebd-6530-416a-a522-2eb86ddd19d5">
+          <ID>Dim Sub Categorias</ID>
+          <Name>Dim Sub Categorias</Name>
+          <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="d97fa2d3-55c3-4bb4-89b4-39b8c9038ee3">
+            <DataSourceViewID>Descuentos DW6to</DataSourceViewID>
+            <TableID>dbo_dimSubCategorias</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Fact Ventas</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="9a7b3c88-c889-4444-ac02-6755e9d52fba">
+          <ID>Fact Ventas</ID>
+          <Name>Fact Ventas</Name>
+          <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="39c09f69-b0b3-4a85-af5a-1300f60f864f">
+            <DataSourceViewID>Descuentos DW6to</DataSourceViewID>
+            <TableID>dbo_factVentas</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <EstimatedRows>60919</EstimatedRows>
+          <AggregationDesignID>AggregationDesign_UBO</AggregationDesignID>
+        </Partition>
+      </Partitions>
+      <AggregationDesigns>
+        <AggregationDesign>
+          <ID>AggregationDesign_FactVentas</ID>
+          <Name>AggregationDesign_FactVentas</Name>
+          <CreatedTimestamp>2026-09-17T21:38:51.83Z</CreatedTimestamp>
+          <LastSchemaUpdate>2026-09-17T21:38:51.83Z</LastSchemaUpdate>
+          <EstimatedRows>60919</EstimatedRows>
+          <Dimensions>
+            <Dimension>
+              <CubeDimensionID>Dim Fechas</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Fecha ID</AttributeID>
+                  <EstimatedCount>1461</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Anio</AttributeID>
+                  <EstimatedCount>4</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Trimestre</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Mes</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Fecha</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Meses Nombres</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Dim Productos</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Producto ID</AttributeID>
+                  <EstimatedCount>295</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Modelo ID</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Sub Categoria ID</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Producto</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Dim Clientes</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Cliente ID</AttributeID>
+                  <EstimatedCount>635</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Cliente</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Tipo</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Clientes Descuento</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Dim Modelos</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Modelo ID</AttributeID>
+                  <EstimatedCount>128</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Modelo</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Dim Sub Categorias</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Sub Categoria ID</AttributeID>
+                  <EstimatedCount>37</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Categoria Id</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Sub Categoria</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Dim Categorias</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Categoria ID</AttributeID>
+                  <EstimatedCount>4</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Categoria</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+          </Dimensions>
+          <Aggregations>
+            <Aggregation>
+              <ID>Aggregation 0</ID>
+              <Name>Aggregation 0</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fechas</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Anio</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Productos</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Modelos</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Sub Categorias</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Sub Categoria ID</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Categorias</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Categoria ID</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 1</ID>
+              <Name>Aggregation 1</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fechas</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Anio</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Productos</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Modelos</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Sub Categorias</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Categorias</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Categoria ID</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 2</ID>
+              <Name>Aggregation 2</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fechas</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Anio</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Productos</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Modelos</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Modelo ID</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Sub Categorias</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Categorias</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 3</ID>
+              <Name>Aggregation 3</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fechas</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Productos</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Modelos</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Modelo ID</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Sub Categorias</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Categorias</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Categoria ID</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 4</ID>
+              <Name>Aggregation 4</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fechas</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Productos</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Cliente ID</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Modelos</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Sub Categorias</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Categorias</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 5</ID>
+              <Name>Aggregation 5</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fechas</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Anio</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Productos</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Producto ID</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Modelos</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Sub Categorias</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Categorias</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 6</ID>
+              <Name>Aggregation 6</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fechas</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Productos</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Producto ID</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Modelos</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Sub Categorias</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Categorias</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Categoria ID</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+          </Aggregations>
+        </AggregationDesign>
+        <AggregationDesign>
+          <ID>AggregationDesign_UBO</ID>
+          <Name>AggregationDesign_UBO</Name>
+          <CreatedTimestamp>2026-09-17T22:11:39.32Z</CreatedTimestamp>
+          <LastSchemaUpdate>2026-09-17T22:11:39.32Z</LastSchemaUpdate>
+          <EstimatedRows>60919</EstimatedRows>
+          <Dimensions>
+            <Dimension>
+              <CubeDimensionID>Dim Fechas</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Fecha ID</AttributeID>
+                  <EstimatedCount>1461</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Anio</AttributeID>
+                  <EstimatedCount>4</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Trimestre</AttributeID>
+                  <EstimatedCount>4</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Mes</AttributeID>
+                  <EstimatedCount>12</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Fecha</AttributeID>
+                  <EstimatedCount>1461</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Meses Nombres</AttributeID>
+                  <EstimatedCount>12</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Dim Productos</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Producto ID</AttributeID>
+                  <EstimatedCount>295</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Modelo ID</AttributeID>
+                  <EstimatedCount>119</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Sub Categoria ID</AttributeID>
+                  <EstimatedCount>37</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Producto</AttributeID>
+                  <EstimatedCount>295</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Dim Clientes</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Cliente ID</AttributeID>
+                  <EstimatedCount>635</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Cliente</AttributeID>
+                  <EstimatedCount>635</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Tipo</AttributeID>
+                  <EstimatedCount>1</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Clientes Descuento</AttributeID>
+                  <EstimatedCount>635</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Dim Modelos</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Modelo ID</AttributeID>
+                  <EstimatedCount>128</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Modelo</AttributeID>
+                  <EstimatedCount>128</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Dim Sub Categorias</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Sub Categoria ID</AttributeID>
+                  <EstimatedCount>37</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Categoria Id</AttributeID>
+                  <EstimatedCount>4</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Sub Categoria</AttributeID>
+                  <EstimatedCount>37</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Dim Categorias</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Categoria ID</AttributeID>
+                  <EstimatedCount>4</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Categoria</AttributeID>
+                  <EstimatedCount>4</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+          </Dimensions>
+          <Aggregations>
+            <Aggregation>
+              <ID>Aggregation 0</ID>
+              <Name>Aggregation 0</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fechas</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Productos</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Modelos</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Sub Categorias</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Categorias</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+          </Aggregations>
+        </AggregationDesign>
+        <AggregationDesign>
+          <ID>AggregationDesign</ID>
+          <Name>AggregationDesign</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <EstimatedRows>60919</EstimatedRows>
+          <Dimensions>
+            <Dimension>
+              <CubeDimensionID>Dim Fechas</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Fecha ID</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Dim Productos</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Producto ID</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Dim Clientes</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Cliente ID</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+          </Dimensions>
+        </AggregationDesign>
+      </AggregationDesigns>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

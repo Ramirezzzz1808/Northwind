@@ -1,4 +1,4 @@
-﻿namespace Microsoft.AspNetCore.Builder;
+namespace Microsoft.AspNetCore.Builder;
 
 public static class EndpointsContainer
 {
@@ -6,6 +6,7 @@ public static class EndpointsContainer
         this WebApplication app)
     {
         app.UseCreateOrderController();
+        app.UseSearchController();
         app.UseMembershipEndpoints();   // ← nuevo
         return app;
     }

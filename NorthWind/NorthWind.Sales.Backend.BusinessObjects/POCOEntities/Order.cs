@@ -1,4 +1,4 @@
-﻿using NorthWind.Sales.Backend.BusinessObjects.Enums;
+using NorthWind.Sales.Backend.BusinessObjects.Enums;
 
 namespace NorthWind.Sales.Backend.BusinessObjects.POCOEntities;
 
@@ -14,4 +14,9 @@ public class Order
     public DiscountType DiscountType { get; set; } = DiscountType.Percentage;
     public double Discount { get; set; } = 10;
     public DateTime OrderDate { get; set; } = DateTime.Now;
+
+    // Totales de la factura (se calculan en OrderAggregate).
+    public decimal Subtotal { get; set; }
+    public decimal TaxAmount { get; set; }
+    public decimal Total { get; set; }
 }

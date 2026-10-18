@@ -17,3 +17,4 @@ C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Validators.Entities\obj\
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net10.0\refint\NorthWind.Sales.Validators.Entities.dll
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net10.0\NorthWind.Sales.Validators.Entities.pdb
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net10.0\ref\NorthWind.Sales.Validators.Entities.dll
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net10.0\NorthWind.Sales.Validators.Entities.sourcelink.json

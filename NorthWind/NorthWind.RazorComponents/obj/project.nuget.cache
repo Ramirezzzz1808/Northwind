@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ZzpE9HAevLw=",
+  "dgSpecHash": "MUJv5fA0hjs=",
   "success": true,
   "projectFilePath": "C:\\Users\\Antonio\\source\\repos\\NorthWind\\NorthWind.RazorComponents\\NorthWind.RazorComponents.csproj",
   "expectedPackageFiles": [
@@ -23,6 +23,7 @@
     "C:\\Users\\Antonio\\.nuget\\packages\\microsoft.extensions.primitives\\10.0.12\\microsoft.extensions.primitives.10.0.12.nupkg.sha512",
     "C:\\Users\\Antonio\\.nuget\\packages\\microsoft.extensions.validation\\10.0.12\\microsoft.extensions.validation.10.0.12.nupkg.sha512",
     "C:\\Users\\Antonio\\.nuget\\packages\\microsoft.jsinterop\\10.0.12\\microsoft.jsinterop.10.0.12.nupkg.sha512",
+    "C:\\Users\\Antonio\\.nuget\\packages\\system.security.cryptography.pkcs\\10.0.13\\system.security.cryptography.pkcs.10.0.13.nupkg.sha512",
     "C:\\Users\\Antonio\\.nuget\\packages\\northwind.validation.entities\\1.0.0\\northwind.validation.entities.1.0.0.nupkg.sha512"
   ],
   "logs": []

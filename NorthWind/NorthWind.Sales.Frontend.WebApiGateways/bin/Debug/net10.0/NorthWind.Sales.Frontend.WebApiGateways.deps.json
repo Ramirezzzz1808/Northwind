@@ -11,7 +11,8 @@
           "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.12",
           "Microsoft.Extensions.Http": "10.0.12",
           "NorthWind.HttpDelegatingHandlers": "1.0.0",
-          "NorthWind.Sales.Frontend.BusinessObjects": "1.0.0"
+          "NorthWind.Sales.Frontend.BusinessObjects": "1.0.0",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "runtime": {
           "NorthWind.Sales.Frontend.WebApiGateways.dll": {}
@@ -171,9 +172,26 @@
           }
         }
       },
+      "System.Security.Cryptography.Pkcs/10.0.13": {
+        "runtime": {
+          "lib/net10.0/System.Security.Cryptography.Pkcs.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.1326.50504"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net10.0/System.Security.Cryptography.Pkcs.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.1326.50504"
+          }
+        }
+      },
       "NorthWind.HttpDelegatingHandlers/1.0.0": {
         "dependencies": {
-          "NorthWind.Validation.Entities": "1.0.0"
+          "NorthWind.Validation.Entities": "1.0.0",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "runtime": {
           "NorthWind.HttpDelegatingHandlers.dll": {
@@ -183,6 +201,9 @@
         }
       },
       "NorthWind.Sales.Entities/1.0.0": {
+        "dependencies": {
+          "System.Security.Cryptography.Pkcs": "10.0.13"
+        },
         "runtime": {
           "NorthWind.Sales.Entities.dll": {
             "assemblyVersion": "1.0.0.0",
@@ -192,7 +213,8 @@
       },
       "NorthWind.Sales.Frontend.BusinessObjects/1.0.0": {
         "dependencies": {
-          "NorthWind.Sales.Entities": "1.0.0"
+          "NorthWind.Sales.Entities": "1.0.0",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "runtime": {
           "NorthWind.Sales.Frontend.BusinessObjects.dll": {
@@ -203,7 +225,8 @@
       },
       "NorthWind.Validation.Entities/1.0.0": {
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.12"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.12",
+          "System.Security.Cryptography.Pkcs": "10.0.13"
         },
         "runtime": {
           "NorthWind.Validation.Entities.dll": {
@@ -310,6 +333,13 @@
       "sha512": "sha512-dYfCLR52UA+3DL7C4I/pvSaRPkNqxrUAQmbFL2u0zvYKKzqgrFCJl08Df+F1aYc8leu9JvpC9bsURUdpExcBXQ==",
       "path": "microsoft.extensions.primitives/10.0.12",
       "hashPath": "microsoft.extensions.primitives.10.0.12.nupkg.sha512"
+    },
+    "System.Security.Cryptography.Pkcs/10.0.13": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-a+EovgC1fBnwdlQ6cn3j4JFBfKqiFaFvoAhjisOoSvazLAcIznaBzPQP0oYnvccmeXfqUH1KebVZOxSeH6rMaw==",
+      "path": "system.security.cryptography.pkcs/10.0.13",
+      "hashPath": "system.security.cryptography.pkcs.10.0.13.nupkg.sha512"
     },
     "NorthWind.HttpDelegatingHandlers/1.0.0": {
       "type": "project",

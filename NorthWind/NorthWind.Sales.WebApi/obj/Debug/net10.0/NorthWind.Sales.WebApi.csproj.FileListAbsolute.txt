@@ -126,3 +126,6 @@ C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.WebApi\bin\Debug\net10.0
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.WebApi\bin\Debug\net10.0\NorthWind.Result.Entities.dll
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.WebApi\bin\Debug\net10.0\Microsoft.Bcl.Cryptography.dll
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.WebApi\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.WebApi\obj\Debug\net10.0\NorthWind.Sales.WebApi.sourcelink.json
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.WebApi\bin\Debug\net10.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.WebApi\bin\Debug\net10.0\runtimes\win\lib\net10.0\System.Security.Cryptography.Pkcs.dll

@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using NorthWind.Sales.Backend.BusinessObjects.POCOEntities;
 using NorthWind.Sales.Backend.Repositories.Entities;
@@ -21,8 +21,13 @@ internal class OrderConfiguration : IEntityTypeConfiguration<Order>
         builder.Property(o => o.ShipCity).HasMaxLength(15);
         builder.Property(o => o.ShipCountry).HasMaxLength(15);
         builder.Property(o => o.ShipPostalCode).HasMaxLength(10);
+
+        builder.Property(o => o.Subtotal).HasPrecision(12, 2);
+        builder.Property(o => o.TaxAmount).HasPrecision(12, 2);
+        builder.Property(o => o.Total).HasPrecision(12, 2);
+
         builder.HasOne<Customer>()
-    .WithMany()
-    .HasForeignKey(o => o.CustomerId);
+            .WithMany()
+            .HasForeignKey(o => o.CustomerId);
     }
 }

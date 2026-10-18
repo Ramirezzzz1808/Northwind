@@ -45,3 +45,4 @@ C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Backend.IoC\bin\Debug\ne
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Backend.IoC\bin\Debug\net10.0\NorthWind.Transactions.Entities.pdb
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Backend.IoC\bin\Debug\net10.0\NorthWind.UserServices.dll
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Backend.IoC\bin\Debug\net10.0\NorthWind.UserServices.pdb
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.Backend.IoC\obj\Debug\net10.0\NorthWind.Sales.Backend.IoC.sourcelink.json

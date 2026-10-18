@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "oPEI1YF2gao=",
+  "dgSpecHash": "Vcw6eTK+JkQ=",
   "success": true,
   "projectFilePath": "C:\\Users\\Antonio\\source\\repos\\NorthWind\\NorthWind.Sales.Backend.IoC\\NorthWind.Sales.Backend.IoC.csproj",
   "expectedPackageFiles": [
@@ -36,7 +36,7 @@
     "C:\\Users\\Antonio\\.nuget\\packages\\system.configuration.configurationmanager\\9.0.11\\system.configuration.configurationmanager.9.0.11.nupkg.sha512",
     "C:\\Users\\Antonio\\.nuget\\packages\\system.identitymodel.tokens.jwt\\8.23.0\\system.identitymodel.tokens.jwt.8.23.0.nupkg.sha512",
     "C:\\Users\\Antonio\\.nuget\\packages\\system.memory.data\\8.0.1\\system.memory.data.8.0.1.nupkg.sha512",
-    "C:\\Users\\Antonio\\.nuget\\packages\\system.security.cryptography.pkcs\\9.0.11\\system.security.cryptography.pkcs.9.0.11.nupkg.sha512",
+    "C:\\Users\\Antonio\\.nuget\\packages\\system.security.cryptography.pkcs\\10.0.13\\system.security.cryptography.pkcs.10.0.13.nupkg.sha512",
     "C:\\Users\\Antonio\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.11\\system.security.cryptography.protecteddata.9.0.11.nupkg.sha512",
     "C:\\Users\\Antonio\\.nuget\\packages\\northwind.validation.entities\\1.0.0\\northwind.validation.entities.1.0.0.nupkg.sha512"
   ],

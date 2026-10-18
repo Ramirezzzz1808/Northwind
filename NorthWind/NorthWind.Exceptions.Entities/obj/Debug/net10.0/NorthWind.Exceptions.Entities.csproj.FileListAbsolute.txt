@@ -15,3 +15,4 @@ C:\Users\Antonio\source\repos\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net10.0\refint\NorthWind.Exceptions.Entities.dll
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net10.0\NorthWind.Exceptions.Entities.pdb
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net10.0\ref\NorthWind.Exceptions.Entities.dll
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net10.0\NorthWind.Exceptions.Entities.sourcelink.json

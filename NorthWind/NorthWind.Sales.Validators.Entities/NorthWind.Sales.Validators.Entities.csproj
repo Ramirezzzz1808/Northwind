@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.Security.Cryptography.Pkcs" Version="10.0.13" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\NorthWind.Sales.Entities\NorthWind.Sales.Entities.csproj" />
     <ProjectReference Include="..\NorthWind.Validation.Entities\NorthWind.Validation.Entities.csproj" />
   </ItemGroup>

@@ -11,6 +11,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="System.Security.Cryptography.Pkcs" Version="10.0.13" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <ProjectReference Include="..\NorthWind.Entities\NorthWind.Entities.csproj" />
 	</ItemGroup>
 
