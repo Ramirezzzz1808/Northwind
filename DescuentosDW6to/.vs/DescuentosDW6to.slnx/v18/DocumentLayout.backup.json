@@ -1,0 +1,50 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Antonio\\source\\repos\\DescuentosDW6to\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CD48EA18-D7BF-91E7-20E6-9E192FBDC0C8}|DescuentosDW6to.dwproj|C:\\Users\\Antonio\\source\\repos\\DescuentosDW6to\\Descuentos DW6to.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{CD48EA18-D7BF-91E7-20E6-9E192FBDC0C8}|DescuentosDW6to.dwproj|solutionrelative:Descuentos DW6to.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Descuentos DW6to.cube [Design]",
+              "DocumentMoniker": "C:\\Users\\Antonio\\source\\repos\\DescuentosDW6to\\Descuentos DW6to.cube",
+              "RelativeDocumentMoniker": "Descuentos DW6to.cube",
+              "ToolTip": "C:\\Users\\Antonio\\source\\repos\\DescuentosDW6to\\Descuentos DW6to.cube [Design]",
+              "RelativeToolTip": "Descuentos DW6to.cube [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-09-17T22:06:10.588Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

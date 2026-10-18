@@ -1,0 +1,68 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>Prueba001</Database>
+    <Server>localhost\SOPORTE_M_1BD</Server>
+    <ConnectionString>Data Source=localhost\SOPORTE_M_1BD;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>Default</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>igV0oirSZGTY+1zCgrk+4GkrJic=8/18/2026 4:35:53 PM8/13/2026 5:38:43 PM</TimeStamp>
+        <ID>
+          <String>Northwind</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>lvy+VwfOeFeC8beegv1D/hyjOQA=8/19/2026 5:02:57 PM8/13/2026 5:40:15 PM</TimeStamp>
+        <ID>
+          <String>Northwind</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>niOG5x1p5RorXGilhlm5epF5bRU=8/19/2026 4:40:36 PM8/13/2026 5:43:02 PM</TimeStamp>
+        <ID>
+          <String>Orders</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>ix+aj2av6FmGUxj6PFCVPBJR7Co=8/18/2026 5:33:12 PM8/13/2026 5:43:02 PM</TimeStamp>
+        <ID>
+          <String>Products</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>l4wWPu2PA1o8q6OJO6i4jI8coPA=8/19/2026 5:02:57 PM8/13/2026 5:43:02 PM0zjB6y/5GWaRzHqvT4lkk6Rzem4=8/19/2026 5:02:57 PM8/13/2026 5:43:02 PM</TimeStamp>
+        <ID>
+          <String>Northwind</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>mcGwkT4dwMOQlRLrFoOOICnMK+g=8/13/2026 5:24:41 PM8/13/2026 5:24:40 PM</TimeStamp>
+      <ID>
+        <String>Prueba001</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2026-08-19T22:03:01.536667Z</LastDeployed>
+</DeploymentSnapshot>
