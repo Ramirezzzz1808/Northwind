@@ -38,11 +38,10 @@ internal class CreateOrderInteractor(
             await repository.CreateOrder(Order);
             await repository.SaveChanges();
 
-            await domainLogger.LogInformation(new DomainLog(
-                string.Format(
-                    CreateOrderMessages.PurchaseOrderCreatedTemplate,
-                    Order.Id),
-                userService.UserName));
+            // Los logs de dominio van a otra base de datos (NorthWindLogsDB).
+            // Escribirlos dentro de esta transacción la convertiría en una
+            // transacción distribuida (MSDTC), que Linux no soporta. Por eso
+            // el log de "orden creada" se escribe después del commit.
 
             await outputPort.Handle(Order);
 
@@ -68,6 +67,13 @@ internal class CreateOrderInteractor(
 
             throw;
         }
+
+        // Solo se llega aquí si la transacción se confirmó.
+        await domainLogger.LogInformation(new DomainLog(
+            string.Format(
+                CreateOrderMessages.PurchaseOrderCreatedTemplate,
+                Order.Id),
+            userService.UserName));
     }
 
     async Task<CreateOrderDto> ApplyCatalogPrices(CreateOrderDto orderDto)
