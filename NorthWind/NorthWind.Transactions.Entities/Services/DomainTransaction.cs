@@ -1,4 +1,4 @@
-﻿using NorthWind.Transactions.Entities.Interfaces;
+using NorthWind.Transactions.Entities.Interfaces;
 using System.Transactions;
 
 namespace NorthWind.Transactions.Entities.Services;
@@ -9,7 +9,14 @@ internal class DomainTransaction : IDomainTransaction, IDisposable
 
     public void BeginTransaction()
     {
-        TransactionManager.ImplicitDistributedTransactions = true;
+        // Las transacciones distribuidas (MSDTC) solo existen en Windows;
+        // en Linux incluso asignar esta propiedad lanza
+        // PlatformNotSupportedException. El caso de uso mantiene una sola
+        // conexión dentro de la transacción, por lo que no se necesitan.
+        if (OperatingSystem.IsWindows())
+        {
+            TransactionManager.ImplicitDistributedTransactions = true;
+        }
 
         TransactionScope = new TransactionScope(
             TransactionScopeOption.Required,
