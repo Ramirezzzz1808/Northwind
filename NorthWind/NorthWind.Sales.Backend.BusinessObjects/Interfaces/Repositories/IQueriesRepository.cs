@@ -16,7 +16,7 @@ public interface IQueriesRepository
     Task<PagedResultDto<CustomerSearchItemDto>> SearchCustomers(
         string text, int page, int pageSize);
 
-    // Solo productos con stock mayor que cero.
+    // Todos los productos; los de stock cero van al final de la lista.
     Task<PagedResultDto<ProductSearchItemDto>> SearchProducts(
         string text, int page, int pageSize);
 

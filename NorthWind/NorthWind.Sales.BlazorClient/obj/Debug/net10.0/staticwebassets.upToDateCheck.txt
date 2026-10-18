@@ -1,4 +1,3 @@
-wwwroot\css\app.css
 wwwroot\favicon.png
 wwwroot\icon-192.png
 wwwroot\index.html
@@ -47,8 +46,8 @@ wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
 wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
 wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
 wwwroot\sample-data\weather.json
+wwwroot\css\app.css
 wwwroot\appsettings.json
-C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.BlazorClient\wwwroot\css\app.css
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.BlazorClient\wwwroot\index.html
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.BlazorClient\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.BlazorClient\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
@@ -96,3 +95,4 @@ C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.BlazorClient\wwwroot\lib
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.BlazorClient\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.BlazorClient\wwwroot\sample-data\weather.json
 C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.BlazorClient\wwwroot\appsettings.json
+C:\Users\Antonio\source\repos\NorthWind\NorthWind.Sales.BlazorClient\wwwroot\css\app.css

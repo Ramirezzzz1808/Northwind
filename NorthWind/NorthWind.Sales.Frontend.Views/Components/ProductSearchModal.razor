@@ -1,0 +1,235 @@
+<div class="modal fade show d-block" tabindex="-1" role="dialog"
+     style="background-color: rgba(0,0,0,.5);">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">@Title</h5>
+                <button type="button" class="btn-close"
+                        aria-label="@PosMessages.CloseButton"
+                        @onclick="OnClose"></button>
+            </div>
+
+            <div class="modal-body">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control"
+                           placeholder="@PosMessages.SearchPlaceholder"
+                           @bind="SearchText"
+                           @bind:event="oninput"
+                           @onkeydown="HandleKeyDown" />
+                    <button type="button" class="btn btn-primary"
+                            @onclick="SearchFirstPage">
+                        @PosMessages.SearchButton
+                    </button>
+                </div>
+
+                @if (!string.IsNullOrEmpty(Error))
+                {
+                    <div class="alert alert-danger">@Error</div>
+                }
+
+                @if (IsLoading)
+                {
+                    <p class="text-muted">@PosMessages.Loading</p>
+                }
+                else if (Result == null || Result.Items.Count == 0)
+                {
+                    <p class="text-muted">@PosMessages.NoResults</p>
+                }
+                else
+                {
+                    <div class="table-responsive">
+                        <table class="table table-sm align-middle">
+                            <thead>
+                                <tr>
+                                    <th style="width: 90px;">@PosSelectionMessages.PickColumn</th>
+                                    <th>@PosMessages.ProductLabel</th>
+                                    <th class="text-end">@PosMessages.UnitPriceLabel</th>
+                                    <th class="text-end">@PosMessages.StockLabel</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var Item in Result.Items)
+                                {
+                                    bool InOrder = IsInOrder(Item);
+                                    bool NoStock = Item.UnitsInStock <= 0;
+                                    bool Locked = InOrder || NoStock;
+                                    bool Picked = InOrder || Picks.ContainsKey(Item.Id);
+
+                                    <tr class="@RowClass(InOrder, NoStock, Picked)">
+                                        <td>
+                                            @if (MultiSelect)
+                                            {
+                                                <input type="checkbox" class="form-check-input"
+                                                       checked="@Picked"
+                                                       disabled="@Locked"
+                                                       @onchange="e => Toggle(Item, (bool)e.Value!)" />
+                                            }
+                                            else if (!Locked)
+                                            {
+                                                <button type="button" class="btn btn-sm btn-success"
+                                                        @onclick="() => ConfirmSingle(Item)">
+                                                    @PosMessages.SelectButton
+                                                </button>
+                                            }
+                                        </td>
+                                        <td>@Item.Name</td>
+                                        <td class="text-end">@Item.UnitPrice.ToString("N2")</td>
+                                        <td class="text-end">@Item.UnitsInStock</td>
+                                        <td class="text-end">
+                                            @if (InOrder)
+                                            {
+                                                <span class="badge bg-secondary">@PosSelectionMessages.SelectedBadge</span>
+                                            }
+                                            else if (NoStock)
+                                            {
+                                                <span class="badge bg-danger">@PosSelectionMessages.OutOfStockBadge</span>
+                                            }
+                                            else if (Picked)
+                                            {
+                                                <span class="badge bg-success">@PosSelectionMessages.SelectedBadge</span>
+                                            }
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                }
+            </div>
+
+            <div class="modal-footer justify-content-between">
+                <div>
+                    @if (Result != null && Result.TotalPages > 0)
+                    {
+                        <small class="text-muted d-block">
+                            Página @Result.Page de @Result.TotalPages
+                            (@Result.TotalCount registros)
+                        </small>
+                    }
+                    @if (MultiSelect)
+                    {
+                        <small class="fw-bold">
+                            @string.Format(PosSelectionMessages.SelectedCount, Picks.Count)
+                        </small>
+                    }
+                </div>
+                <div>
+                    <button type="button" class="btn btn-outline-secondary"
+                            disabled="@(!CanGoPrevious)" @onclick="PreviousPage">
+                        @PosMessages.PreviousButton
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary"
+                            disabled="@(!CanGoNext)" @onclick="NextPage">
+                        @PosMessages.NextButton
+                    </button>
+                    <button type="button" class="btn btn-secondary" @onclick="OnClose">
+                        @PosSelectionMessages.CancelButton
+                    </button>
+                    @if (MultiSelect)
+                    {
+                        <button type="button" class="btn btn-primary"
+                                disabled="@(Picks.Count == 0)" @onclick="ConfirmMany">
+                            @PosSelectionMessages.AcceptButton
+                        </button>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    const int PageSize = 8;
+
+    [Parameter, EditorRequired]
+    public string Title { get; set; } = "";
+
+    [Parameter, EditorRequired]
+    public Func<string, int, int, Task<PagedResultDto<ProductSearchItemDto>>> Search { get; set; } = default!;
+
+    // Productos que ya están en la venta: se muestran "Seleccionado" y bloqueados.
+    [Parameter]
+    public HashSet<int> ProductsInOrder { get; set; } = [];
+
+    // true: varios productos con casillas y botón Aceptar.
+    // false: un solo producto (cambiar producto de una línea).
+    [Parameter]
+    public bool MultiSelect { get; set; } = true;
+
+    [Parameter]
+    public EventCallback<List<ProductSearchItemDto>> OnConfirm { get; set; }
+
+    [Parameter]
+    public EventCallback OnClose { get; set; }
+
+    string SearchText = "";
+    string? Error;
+    bool IsLoading;
+    int CurrentPage = 1;
+    PagedResultDto<ProductSearchItemDto>? Result;
+
+    // Selección acumulada entre páginas y búsquedas.
+    readonly Dictionary<int, ProductSearchItemDto> Picks = [];
+
+    bool CanGoPrevious => !IsLoading && Result != null && CurrentPage > 1;
+    bool CanGoNext => !IsLoading && Result != null && CurrentPage < Result.TotalPages;
+
+    bool IsInOrder(ProductSearchItemDto item) => ProductsInOrder.Contains(item.Id);
+
+    static string RowClass(bool inOrder, bool noStock, bool picked) =>
+        inOrder ? "table-secondary" :
+        noStock ? "text-muted" :
+        picked ? "table-success" : "";
+
+    void Toggle(ProductSearchItemDto item, bool isChecked)
+    {
+        if (isChecked)
+        {
+            Picks[item.Id] = item;
+        }
+        else
+        {
+            Picks.Remove(item.Id);
+        }
+    }
+
+    async Task ConfirmMany() =>
+        await OnConfirm.InvokeAsync(Picks.Values.ToList());
+
+    async Task ConfirmSingle(ProductSearchItemDto item) =>
+        await OnConfirm.InvokeAsync([item]);
+
+    protected override async Task OnInitializedAsync() => await LoadPage(1);
+
+    async Task SearchFirstPage() => await LoadPage(1);
+    async Task PreviousPage() => await LoadPage(CurrentPage - 1);
+    async Task NextPage() => await LoadPage(CurrentPage + 1);
+
+    async Task HandleKeyDown(KeyboardEventArgs e)
+    {
+        if (e.Key == "Enter")
+        {
+            await LoadPage(1);
+        }
+    }
+
+    async Task LoadPage(int page)
+    {
+        IsLoading = true;
+        Error = null;
+        try
+        {
+            Result = await Search(SearchText?.Trim() ?? "", page, PageSize);
+            CurrentPage = page;
+        }
+        catch (Exception)
+        {
+            Error = PosMessages.SearchFailed;
+        }
+        finally
+        {
+            IsLoading = false;
+        }
+    }
+}

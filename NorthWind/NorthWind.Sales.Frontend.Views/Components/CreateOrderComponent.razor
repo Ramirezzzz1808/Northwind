@@ -28,7 +28,7 @@
 
     <h5>@PosMessages.ShippingSection</h5>
     <div class="row g-3 mb-3">
-        <div class="col-md-6">
+        <div class="col-md-4">
             <label for="shipAddress" class="form-label">@CreateOrderMessages.ShipAddressLabel</label>
             <InputText class="form-control" id="shipAddress"
                        @bind-Value="Order.ShipAddress" />
@@ -46,7 +46,7 @@
                        @bind-Value="Order.ShipCountry" />
             <ValidationMessage For="() => Order.ShipCountry" />
         </div>
-        <div class="col-md-3">
+        <div class="col-md-2">
             <label for="shipPostalCode" class="form-label">@CreateOrderMessages.ShipPostalCodeLabel</label>
             <InputText class="form-control" id="shipPostalCode"
                        @bind-Value="Order.ShipPostalCode" />
@@ -58,10 +58,19 @@
 
     <div class="d-flex justify-content-between align-items-center mb-2">
         <h5 class="mb-0">@PosMessages.DetailSection</h5>
-        <button type="button" class="btn btn-outline-primary"
-                @onclick="OpenProductModalForAdd">
-            @PosMessages.SearchProductButton
-        </button>
+        <div class="d-flex gap-2">
+            @if (Order.OrderDetails.Count > 0)
+            {
+                <button type="button" class="btn btn-outline-danger"
+                        @onclick="AskClearConfirmation">
+                    @PosSelectionMessages.RemoveAllButton
+                </button>
+            }
+            <button type="button" class="btn btn-outline-primary"
+                    @onclick="OpenProductModalForAdd">
+                @PosMessages.SearchProductButton
+            </button>
+        </div>
     </div>
 
     @if (Order.OrderDetails.Count == 0)
@@ -177,20 +186,20 @@
 
 @if (ShowProductModal)
 {
-    <SearchModal TItem="ProductSearchItemDto"
-                 Title="@PosMessages.ProductSearchTitle"
-                 Search="Order.SearchProducts"
-                 OnSelected="ProductSelected"
-                 OnClose="CloseModals">
-        <HeaderTemplate>
-            <th>@PosMessages.ProductLabel</th>
-            <th class="text-end">@PosMessages.UnitPriceLabel</th>
-            <th class="text-end">@PosMessages.StockLabel</th>
-        </HeaderTemplate>
-        <RowTemplate Context="Product">
-            <td>@Product.Name</td>
-            <td class="text-end">@Product.UnitPrice.ToString("N2")</td>
-            <td class="text-end">@Product.UnitsInStock</td>
-        </RowTemplate>
-    </SearchModal>
+    <ProductSearchModal Title="@PosMessages.ProductSearchTitle"
+                        Search="Order.SearchProducts"
+                        ProductsInOrder="ProductsInOrder"
+                        MultiSelect="@(DetailToReplace == null)"
+                        OnConfirm="ProductsConfirmed"
+                        OnClose="CloseModals" />
+}
+
+@if (ShowClearConfirmation)
+{
+    <ConfirmModal Title="@PosSelectionMessages.RemoveAllTitle"
+                  Message="@PosSelectionMessages.RemoveAllQuestion"
+                  ConfirmText="@PosSelectionMessages.RemoveAllYes"
+                  CancelText="@PosSelectionMessages.RemoveAllNo"
+                  OnConfirm="ConfirmClear"
+                  OnCancel="CancelClear" />
 }

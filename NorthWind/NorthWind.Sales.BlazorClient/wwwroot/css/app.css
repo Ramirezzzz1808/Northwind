@@ -5,3 +5,65 @@ html, body {
 h1:focus {
     outline: none;
 }
+
+/* Bootstrap 5 ya no incluye .form-group: se restaura el espaciado
+   de los formularios de registro e inicio de sesión. */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group + .btn[type="submit"] {
+    margin-top: .5rem;
+}
+
+/* Errores de validación en rojo (mensajes por campo y resumen). */
+.validation-message,
+.validation-errors,
+.validation-errors li {
+    color: #dc3545;
+    font-size: .875rem;
+}
+
+.validation-errors {
+    margin-bottom: 1rem;
+    padding-left: 1.25rem;
+}
+
+/* Campo con error: borde rojo (Blazor agrega la clase "invalid"). */
+.form-control.invalid,
+input.invalid {
+    border-color: #dc3545;
+}
+
+.form-control.invalid:focus,
+input.invalid:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 .2rem rgba(220, 53, 69, .25);
+}
+
+/* Aviso de error no controlado de Blazor: oculto por defecto.
+   Blazor lo muestra solo cuando ocurre una excepción real. */
+#blazor-error-ui {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: .6rem 1.25rem .7rem 1.25rem;
+    background: lightyellow;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+}
+
+#blazor-error-ui .dismiss {
+    cursor: pointer;
+    position: absolute;
+    right: .75rem;
+    top: .5rem;
+}
+
+@media print {
+    #blazor-error-ui {
+        display: none !important;
+    }
+}

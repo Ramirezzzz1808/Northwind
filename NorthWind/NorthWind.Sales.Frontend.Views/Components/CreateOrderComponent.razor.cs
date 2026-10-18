@@ -10,8 +10,13 @@ public partial class CreateOrderComponent
 
     bool ShowCustomerModal;
     bool ShowProductModal;
+    bool ShowClearConfirmation;
 
-    // Si no es null, el modal de productos reemplaza esa línea; si es null, agrega.
+    // Productos que ya están en la venta (se muestran bloqueados en el modal).
+    HashSet<int> ProductsInOrder = [];
+
+    // Si no es null, el modal de productos reemplaza esa línea (selección única);
+    // si es null, agrega varios productos (selección múltiple).
     CreateOrderDetailViewModel DetailToReplace;
 
     void OpenCustomerModal() => ShowCustomerModal = true;
@@ -19,12 +24,14 @@ public partial class CreateOrderComponent
     void OpenProductModalForAdd()
     {
         DetailToReplace = null;
+        ProductsInOrder = Order.OrderDetails.Select(d => d.ProductId).ToHashSet();
         ShowProductModal = true;
     }
 
     void OpenProductModalForReplace(CreateOrderDetailViewModel detail)
     {
         DetailToReplace = detail;
+        ProductsInOrder = Order.OrderDetails.Select(d => d.ProductId).ToHashSet();
         ShowProductModal = true;
     }
 
@@ -41,17 +48,27 @@ public partial class CreateOrderComponent
         CloseModals();
     }
 
-    void ProductSelected(ProductSearchItemDto product)
+    void ProductsConfirmed(List<ProductSearchItemDto> products)
     {
         if (DetailToReplace == null)
         {
-            Order.AddProduct(product);
+            Order.AddProducts(products);
         }
-        else
+        else if (products.Count > 0)
         {
-            Order.ReplaceProduct(DetailToReplace, product);
+            Order.ReplaceProduct(DetailToReplace, products[0]);
         }
 
         CloseModals();
+    }
+
+    void AskClearConfirmation() => ShowClearConfirmation = true;
+
+    void CancelClear() => ShowClearConfirmation = false;
+
+    void ConfirmClear()
+    {
+        Order.ClearDetails();
+        ShowClearConfirmation = false;
     }
 }

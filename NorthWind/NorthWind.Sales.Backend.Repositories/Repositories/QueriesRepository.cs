@@ -85,9 +85,9 @@ internal class QueriesRepository(INorthWindSalesQueriesDataContext context)
     public async Task<PagedResultDto<ProductSearchItemDto>> SearchProducts(
         string text, int page, int pageSize)
     {
-        // Solo se muestran productos con stock mayor que cero.
-        IQueryable<Entities.Product> Filtered =
-            context.Products.Where(p => p.UnitsInStock > 0);
+        // Se incluyen todos los productos; los de stock cero se envían
+        // al final de la lista y la pantalla los muestra bloqueados.
+        IQueryable<Entities.Product> Filtered = context.Products;
 
         if (!string.IsNullOrWhiteSpace(text))
         {
@@ -106,7 +106,8 @@ internal class QueriesRepository(INorthWindSalesQueriesDataContext context)
         int TotalCount = await context.CountAsync(Filtered);
 
         var PageQuery = Filtered
-            .OrderBy(p => p.Name)
+            .OrderBy(p => p.UnitsInStock <= 0)
+            .ThenBy(p => p.Name)
             .Skip((page - 1) * pageSize)
             .Take(pageSize)
             .Select(p => new ProductSearchItemDto

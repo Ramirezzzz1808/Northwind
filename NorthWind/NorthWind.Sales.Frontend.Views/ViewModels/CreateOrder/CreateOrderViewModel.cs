@@ -68,10 +68,74 @@ public class CreateOrderViewModel(
     {
         ClearMessages();
 
-        if (OrderDetails.Any(d => d.ProductId == product.Id))
+        if (!TryAdd(product, out string Error))
+        {
+            ErrorMessage = Error;
+            return false;
+        }
+
+        InformationMessage = string.Format(
+            PosMessages.ProductAdded, product.Name);
+        return true;
+    }
+
+    /// <summary>
+    /// Agrega varios productos de una sola vez (ventana de selección múltiple).
+    /// Los repetidos o sin stock se omiten.
+    /// </summary>
+    public int AddProducts(IEnumerable<ProductSearchItemDto> products)
+    {
+        ClearMessages();
+
+        int Added = 0;
+        int Skipped = 0;
+
+        foreach (var Product in products)
+        {
+            if (TryAdd(Product, out _))
+            {
+                Added++;
+            }
+            else
+            {
+                Skipped++;
+            }
+        }
+
+        if (Added > 0)
+        {
+            InformationMessage = string.Format(
+                PosSelectionMessages.ProductsAdded, Added);
+
+            if (Skipped > 0)
+            {
+                InformationMessage += string.Format(
+                    PosSelectionMessages.ProductsSkipped, Skipped);
+            }
+        }
+        else if (Skipped > 0)
         {
             ErrorMessage = string.Format(
-                PosMessages.DuplicateProduct, product.Name);
+                PosSelectionMessages.ProductsSkipped, Skipped).Trim();
+        }
+
+        return Added;
+    }
+
+    bool TryAdd(ProductSearchItemDto product, out string error)
+    {
+        error = "";
+
+        if (product.UnitsInStock <= 0)
+        {
+            error = string.Format(
+                PosSelectionMessages.OutOfStockProduct, product.Name);
+            return false;
+        }
+
+        if (OrderDetails.Any(d => d.ProductId == product.Id))
+        {
+            error = string.Format(PosMessages.DuplicateProduct, product.Name);
             return false;
         }
 
@@ -84,8 +148,6 @@ public class CreateOrderViewModel(
             Quantity = 1
         });
 
-        InformationMessage = string.Format(
-            PosMessages.ProductAdded, product.Name);
         return true;
     }
 
@@ -96,6 +158,13 @@ public class CreateOrderViewModel(
         CreateOrderDetailViewModel detail, ProductSearchItemDto product)
     {
         ClearMessages();
+
+        if (product.UnitsInStock <= 0)
+        {
+            ErrorMessage = string.Format(
+                PosSelectionMessages.OutOfStockProduct, product.Name);
+            return false;
+        }
 
         if (OrderDetails.Any(d =>
             !ReferenceEquals(d, detail) && d.ProductId == product.Id))
@@ -126,6 +195,16 @@ public class CreateOrderViewModel(
         OrderDetails.Remove(detail);
         InformationMessage = string.Format(
             PosMessages.ProductRemoved, detail.ProductName);
+    }
+
+    /// <summary>
+    /// Quita todos los productos de la venta (se confirma en la pantalla).
+    /// </summary>
+    public void ClearDetails()
+    {
+        ClearMessages();
+        OrderDetails.Clear();
+        InformationMessage = PosSelectionMessages.AllRemoved;
     }
 
     /// <summary>
