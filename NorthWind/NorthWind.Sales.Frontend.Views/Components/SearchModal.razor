@@ -1,4 +1,5 @@
 @typeparam TItem
+@implements IDisposable
 @using NorthWind.Sales.Entities.Dtos.Search
 
 <div class="modal fade show d-block" tabindex="-1" role="dialog"
@@ -12,16 +13,11 @@
             </div>
 
             <div class="modal-body">
-                <div class="input-group mb-3">
+                <div class="mb-3">
                     <input type="text" class="form-control"
                            placeholder="@PosMessages.SearchPlaceholder"
-                           @bind="SearchText"
-                           @bind:event="oninput"
-                           @onkeydown="HandleKeyDown" />
-                    <button type="button" class="btn btn-primary"
-                            @onclick="SearchFirstPage">
-                        @PosMessages.SearchButton
-                    </button>
+                           value="@SearchText"
+                           @oninput="OnSearchInput" />
                 </div>
 
                 @if (!string.IsNullOrEmpty(Error))
@@ -29,7 +25,7 @@
                     <div class="alert alert-danger">@Error</div>
                 }
 
-                @if (IsLoading)
+                @if (Result == null && IsLoading)
                 {
                     <p class="text-muted">@PosMessages.Loading</p>
                 }
@@ -98,6 +94,7 @@
 
 @code {
     const int PageSize = 8;
+    const int DebounceMilliseconds = 300;
 
     [Parameter, EditorRequired]
     public string Title { get; set; } = "";
@@ -121,6 +118,8 @@
     string? Error;
     bool IsLoading;
     int CurrentPage = 1;
+    int RequestId;
+    CancellationTokenSource? DebounceCts;
     PagedResultDto<TItem>? Result;
 
     bool CanGoPrevious => !IsLoading && Result != null && CurrentPage > 1;
@@ -129,34 +128,67 @@
     protected override async Task OnInitializedAsync() =>
         await LoadPage(1);
 
-    async Task SearchFirstPage() => await LoadPage(1);
     async Task PreviousPage() => await LoadPage(CurrentPage - 1);
     async Task NextPage() => await LoadPage(CurrentPage + 1);
 
-    async Task HandleKeyDown(KeyboardEventArgs e)
+    // Búsqueda automática: espera una pausa al escribir y consulta sin botón.
+    async Task OnSearchInput(ChangeEventArgs e)
     {
-        if (e.Key == "Enter")
+        SearchText = e.Value?.ToString() ?? "";
+
+        DebounceCts?.Cancel();
+        DebounceCts?.Dispose();
+        var Cts = DebounceCts = new CancellationTokenSource();
+
+        try
         {
-            await LoadPage(1);
+            await Task.Delay(DebounceMilliseconds, Cts.Token);
         }
+        catch (TaskCanceledException)
+        {
+            return;
+        }
+
+        await LoadPage(1);
     }
 
     async Task LoadPage(int page)
     {
+        int ThisRequest = ++RequestId;
         IsLoading = true;
         Error = null;
         try
         {
-            Result = await Search(SearchText?.Trim() ?? "", page, PageSize);
+            var NewResult = await Search(SearchText?.Trim() ?? "", page, PageSize);
+
+            // Si llegó una búsqueda más nueva, se descarta esta respuesta.
+            if (ThisRequest != RequestId)
+            {
+                return;
+            }
+
+            Result = NewResult;
             CurrentPage = page;
         }
         catch (Exception)
         {
-            Error = PosMessages.SearchFailed;
+            if (ThisRequest == RequestId)
+            {
+                Error = PosMessages.SearchFailed;
+            }
         }
         finally
         {
-            IsLoading = false;
+            if (ThisRequest == RequestId)
+            {
+                IsLoading = false;
+            }
         }
+    }
+
+    public void Dispose()
+    {
+        DebounceCts?.Cancel();
+        DebounceCts?.Dispose();
     }
 }

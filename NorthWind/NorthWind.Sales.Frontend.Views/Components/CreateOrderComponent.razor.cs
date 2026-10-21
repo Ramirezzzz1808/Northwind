@@ -12,6 +12,9 @@ public partial class CreateOrderComponent
     bool ShowProductModal;
     bool ShowClearConfirmation;
 
+    // Línea que se quiere quitar (si no es null, se muestra la confirmación).
+    CreateOrderDetailViewModel DetailToRemove;
+
     // Productos que ya están en la venta (se muestran bloqueados en el modal).
     HashSet<int> ProductsInOrder = [];
 
@@ -60,6 +63,21 @@ public partial class CreateOrderComponent
         }
 
         CloseModals();
+    }
+
+    void AskRemoveConfirmation(CreateOrderDetailViewModel detail) =>
+        DetailToRemove = detail;
+
+    void CancelRemove() => DetailToRemove = null;
+
+    void ConfirmRemove()
+    {
+        if (DetailToRemove != null)
+        {
+            Order.RemoveDetail(DetailToRemove);
+        }
+
+        DetailToRemove = null;
     }
 
     void AskClearConfirmation() => ShowClearConfirmation = true;

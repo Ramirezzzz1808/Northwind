@@ -111,7 +111,7 @@
                                     @PosMessages.ChangeProductButton
                                 </button>
                                 <button type="button" class="btn btn-sm btn-outline-danger"
-                                        @onclick="() => Order.RemoveDetail(Item)">
+                                        @onclick="() => AskRemoveConfirmation(Item)">
                                     @PosMessages.RemoveProductButton
                                 </button>
                             </td>
@@ -192,6 +192,16 @@
                         MultiSelect="@(DetailToReplace == null)"
                         OnConfirm="ProductsConfirmed"
                         OnClose="CloseModals" />
+}
+
+@if (DetailToRemove != null)
+{
+    <ConfirmModal Title="@PosSelectionMessages.RemoveOneTitle"
+                  Message="@string.Format(PosSelectionMessages.RemoveOneQuestion, DetailToRemove.ProductName)"
+                  ConfirmText="@PosSelectionMessages.RemoveOneYes"
+                  CancelText="@PosSelectionMessages.RemoveOneNo"
+                  OnConfirm="ConfirmRemove"
+                  OnCancel="CancelRemove" />
 }
 
 @if (ShowClearConfirmation)

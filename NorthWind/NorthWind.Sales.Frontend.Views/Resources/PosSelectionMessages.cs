@@ -21,6 +21,12 @@ public static class PosSelectionMessages
     public const string RemoveAllYes = "Sí, quitar todo";
     public const string RemoveAllNo = "No";
 
+    public const string RemoveOneTitle = "Quitar producto";
+    public const string RemoveOneQuestion =
+        "¿Está seguro de quitar el producto '{0}' de la venta?";
+    public const string RemoveOneYes = "Sí, quitar";
+    public const string RemoveOneNo = "No";
+
     public const string ProductsAdded =
         "{0} producto(s) agregado(s) a la venta.";
     public const string ProductsSkipped =
