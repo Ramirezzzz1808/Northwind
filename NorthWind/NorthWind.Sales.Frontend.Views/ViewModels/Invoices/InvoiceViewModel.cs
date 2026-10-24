@@ -10,8 +10,8 @@ public class InvoiceViewModel(ISearchGateway gateway)
     public bool IsLoading { get; private set; }
 
     public Task<PagedResultDto<OrderSearchItemDto>> SearchOrders(
-        string text, int page, int pageSize) =>
-        gateway.SearchOrdersAsync(text, page, pageSize);
+        string text, string field, int page, int pageSize) =>
+        gateway.SearchOrdersAsync(text, field, page, pageSize);
 
     public async Task LoadInvoice(int orderId)
     {

@@ -1,5 +1,6 @@
 using NorthWind.Sales.Entities.Dtos.Invoice;
 using NorthWind.Sales.Entities.Dtos.Search;
+using NorthWind.Sales.Entities.ValueObjects;
 
 namespace NorthWind.Sales.Backend.Repositories.Repositories;
 
@@ -42,18 +43,29 @@ internal class QueriesRepository(INorthWindSalesQueriesDataContext context)
     }
 
     public async Task<PagedResultDto<CustomerSearchItemDto>> SearchCustomers(
-        string text, int page, int pageSize)
+        string text, string field, int page, int pageSize)
     {
         IQueryable<Entities.Customer> Filtered = context.Customers;
 
         if (!string.IsNullOrWhiteSpace(text))
         {
-            // Búsqueda por varios campos: código, nombre, cédula o correo.
-            Filtered = Filtered.Where(c =>
-                c.Id.Contains(text) ||
-                c.Name.Contains(text) ||
-                c.Identification.Contains(text) ||
-                c.Email.Contains(text));
+            // "all" busca en todos los campos; las demás claves, solo en uno.
+            Filtered = field switch
+            {
+                SearchFields.Id =>
+                    Filtered.Where(c => c.Id.Contains(text)),
+                SearchFields.Name =>
+                    Filtered.Where(c => c.Name.Contains(text)),
+                SearchFields.Identification =>
+                    Filtered.Where(c => c.Identification.Contains(text)),
+                SearchFields.Email =>
+                    Filtered.Where(c => c.Email.Contains(text)),
+                _ => Filtered.Where(c =>
+                    c.Id.Contains(text) ||
+                    c.Name.Contains(text) ||
+                    c.Identification.Contains(text) ||
+                    c.Email.Contains(text))
+            };
         }
 
         int TotalCount = await context.CountAsync(Filtered);
@@ -83,7 +95,7 @@ internal class QueriesRepository(INorthWindSalesQueriesDataContext context)
     }
 
     public async Task<PagedResultDto<ProductSearchItemDto>> SearchProducts(
-        string text, int page, int pageSize)
+        string text, string field, int page, int pageSize)
     {
         // Se incluyen todos los productos; los de stock cero se envían
         // al final de la lista y la pantalla los muestra bloqueados.
@@ -91,16 +103,27 @@ internal class QueriesRepository(INorthWindSalesQueriesDataContext context)
 
         if (!string.IsNullOrWhiteSpace(text))
         {
-            // Búsqueda por dos campos: nombre o código del producto.
-            if (int.TryParse(text, out int ProductId))
+            bool IsNumber = int.TryParse(text, out int ProductId);
+
+            // Los decimales se guardan con punto; se acepta coma al escribir.
+            string Decimal = text.Replace(',', '.');
+
+            Filtered = field switch
             {
-                Filtered = Filtered.Where(p =>
-                    p.Name.Contains(text) || p.Id == ProductId);
-            }
-            else
-            {
-                Filtered = Filtered.Where(p => p.Name.Contains(text));
-            }
+                SearchFields.Id =>
+                    Filtered.Where(p => IsNumber && p.Id == ProductId),
+                SearchFields.Name =>
+                    Filtered.Where(p => p.Name.Contains(text)),
+                SearchFields.UnitPrice =>
+                    Filtered.Where(p => p.UnitPrice.ToString().Contains(Decimal)),
+                SearchFields.UnitsInStock =>
+                    Filtered.Where(p => p.UnitsInStock.ToString().Contains(text)),
+                _ => Filtered.Where(p =>
+                    p.Name.Contains(text) ||
+                    (IsNumber && p.Id == ProductId) ||
+                    p.UnitPrice.ToString().Contains(Decimal) ||
+                    p.UnitsInStock.ToString().Contains(text))
+            };
         }
 
         int TotalCount = await context.CountAsync(Filtered);
@@ -130,7 +153,7 @@ internal class QueriesRepository(INorthWindSalesQueriesDataContext context)
     }
 
     public async Task<PagedResultDto<OrderSearchItemDto>> SearchOrders(
-        string text, int page, int pageSize)
+        string text, string field, int page, int pageSize)
     {
         var Joined =
             from o in context.Orders
@@ -139,23 +162,28 @@ internal class QueriesRepository(INorthWindSalesQueriesDataContext context)
 
         if (!string.IsNullOrWhiteSpace(text))
         {
-            // Por número de factura o por datos del cliente
-            // (código, nombre o cédula).
-            if (int.TryParse(text, out int OrderId))
+            bool IsNumber = int.TryParse(text, out int OrderId);
+
+            // Los decimales se guardan con punto; se acepta coma al escribir.
+            string Decimal = text.Replace(',', '.');
+
+            Joined = field switch
             {
-                Joined = Joined.Where(x =>
-                    x.Order.Id == OrderId ||
+                SearchFields.OrderNumber =>
+                    Joined.Where(x => IsNumber && x.Order.Id == OrderId),
+                SearchFields.CustomerName =>
+                    Joined.Where(x => x.Customer.Name.Contains(text)),
+                SearchFields.Identification =>
+                    Joined.Where(x => x.Customer.Identification.Contains(text)),
+                SearchFields.Total =>
+                    Joined.Where(x => x.Order.Total.ToString().Contains(Decimal)),
+                _ => Joined.Where(x =>
+                    (IsNumber && x.Order.Id == OrderId) ||
                     x.Customer.Name.Contains(text) ||
                     x.Customer.Identification.Contains(text) ||
-                    x.Customer.Id.Contains(text));
-            }
-            else
-            {
-                Joined = Joined.Where(x =>
-                    x.Customer.Name.Contains(text) ||
-                    x.Customer.Identification.Contains(text) ||
-                    x.Customer.Id.Contains(text));
-            }
+                    x.Customer.Id.Contains(text) ||
+                    x.Order.Total.ToString().Contains(Decimal))
+            };
         }
 
         int TotalCount = await context.CountAsync(Joined);

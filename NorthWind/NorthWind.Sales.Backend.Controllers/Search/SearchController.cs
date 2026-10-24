@@ -29,23 +29,26 @@ public static class SearchController
     public static async Task<PagedResultDto<CustomerSearchItemDto>> SearchCustomers(
         ISearchCustomersInputPort inputPort,
         string? text = null,
+        string? field = null,
         int page = 1,
         int pageSize = 10) =>
-        await inputPort.Handle(text ?? "", page, pageSize);
+        await inputPort.Handle(text ?? "", field ?? SearchFields.All, page, pageSize);
 
     public static async Task<PagedResultDto<ProductSearchItemDto>> SearchProducts(
         ISearchProductsInputPort inputPort,
         string? text = null,
+        string? field = null,
         int page = 1,
         int pageSize = 10) =>
-        await inputPort.Handle(text ?? "", page, pageSize);
+        await inputPort.Handle(text ?? "", field ?? SearchFields.All, page, pageSize);
 
     public static async Task<PagedResultDto<OrderSearchItemDto>> SearchOrders(
         ISearchOrdersInputPort inputPort,
         string? text = null,
+        string? field = null,
         int page = 1,
         int pageSize = 10) =>
-        await inputPort.Handle(text ?? "", page, pageSize);
+        await inputPort.Handle(text ?? "", field ?? SearchFields.All, page, pageSize);
 
     public static async Task<IResult> GetInvoice(
         IGetInvoiceInputPort inputPort,

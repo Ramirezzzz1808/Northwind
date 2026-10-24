@@ -117,6 +117,7 @@ else
     <SearchModal TItem="OrderSearchItemDto"
                  Title="@InvoiceMessages.SearchInvoiceTitle"
                  Search="ViewModel.SearchOrders"
+                 Filters="SearchFilterOption.ForInvoices()"
                  OnSelected="OrderSelected"
                  OnClose="CloseSearch">
         <HeaderTemplate>

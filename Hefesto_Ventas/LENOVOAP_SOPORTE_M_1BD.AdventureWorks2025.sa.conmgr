@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="LENOVOAP_SOPORTE_M_1BD.AdventureWorks2025.sa"
+  DTS:DTSID="{E75ACEE8-F64D-41A5-BE91-1A9F265810D4}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=LENOVOAP\SOPORTE_M_1BD;User ID=sa;Initial Catalog=AdventureWorks2025;Provider=MSOLEDBSQL.1;Auto Translate=False;Application Name=SSIS-Hefesto_Ventas-{E75ACEE8-F64D-41A5-BE91-1A9F265810D4}LENOVOAP\SOPORTE_M_1BD.AdventureWorks2025.sa;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAPP4HCDtx8E2oBrkfFZBEFgAAAAACAAAAAAAQZgAAAAEAACAAAABeHA9VQ59SpIa2jRhjAwrRIQI2ZBSdM6+xXbp4O5y4TQAAAAAOgAAAAAIAACAAAABzjxBpzgoyZVzDG5qEpvcWpgK6d+SBv3bVpA4l6iNDGYAAAACII/Ukrl9EojhyEk+dKzEFBUrAzoYthKAz3Hnq8H7J9wIlprVZMd+Z6EEabmKhkI6mQ07eaKtNDUHA1OjryDwQFDGKpIlsylwOdC0uKmNniGsuvTlIUFs0MeuSMisJ8DOX4IMT0ySB7VOaARoS3lGkfdpSJbmxyym95myK6rS9/0AAAAAhUUD6e1doHPiSC0x0wdz+Fmb0HSwiNKFbP6KEolzVm4W0EGP4ldO/n44igfhGh9W7IeI5GBL4SHt4ryEsdysY</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

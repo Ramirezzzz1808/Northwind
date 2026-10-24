@@ -44,12 +44,12 @@ public class CreateOrderViewModel(
 
     #region Búsquedas (usadas por las ventanas emergentes)
     public Task<PagedResultDto<CustomerSearchItemDto>> SearchCustomers(
-        string text, int page, int pageSize) =>
-        searchGateway.SearchCustomersAsync(text, page, pageSize);
+        string text, string field, int page, int pageSize) =>
+        searchGateway.SearchCustomersAsync(text, field, page, pageSize);
 
     public Task<PagedResultDto<ProductSearchItemDto>> SearchProducts(
-        string text, int page, int pageSize) =>
-        searchGateway.SearchProductsAsync(text, page, pageSize);
+        string text, string field, int page, int pageSize) =>
+        searchGateway.SearchProductsAsync(text, field, page, pageSize);
     #endregion
 
     public void SelectCustomer(CustomerSearchItemDto customer)

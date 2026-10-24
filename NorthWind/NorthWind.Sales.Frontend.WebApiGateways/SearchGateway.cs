@@ -7,28 +7,29 @@ namespace NorthWind.Sales.Frontend.WebApiGateways;
 internal class SearchGateway(HttpClient httpClient) : ISearchGateway
 {
     public async Task<PagedResultDto<CustomerSearchItemDto>> SearchCustomersAsync(
-        string text, int page, int pageSize) =>
+        string text, string field, int page, int pageSize) =>
         await GetAsync<CustomerSearchItemDto>(
-            Endpoints.SearchCustomers, text, page, pageSize);
+            Endpoints.SearchCustomers, text, field, page, pageSize);
 
     public async Task<PagedResultDto<ProductSearchItemDto>> SearchProductsAsync(
-        string text, int page, int pageSize) =>
+        string text, string field, int page, int pageSize) =>
         await GetAsync<ProductSearchItemDto>(
-            Endpoints.SearchProducts, text, page, pageSize);
+            Endpoints.SearchProducts, text, field, page, pageSize);
 
     public async Task<PagedResultDto<OrderSearchItemDto>> SearchOrdersAsync(
-        string text, int page, int pageSize) =>
+        string text, string field, int page, int pageSize) =>
         await GetAsync<OrderSearchItemDto>(
-            Endpoints.SearchOrders, text, page, pageSize);
+            Endpoints.SearchOrders, text, field, page, pageSize);
 
     public async Task<InvoiceDto?> GetInvoiceAsync(int orderId) =>
         await httpClient.GetFromJsonAsync<InvoiceDto>(
             $"{Endpoints.GetInvoice}?id={orderId}");
 
     async Task<PagedResultDto<T>> GetAsync<T>(
-        string endpoint, string text, int page, int pageSize)
+        string endpoint, string text, string field, int page, int pageSize)
     {
         var Url = $"{endpoint}?text={Uri.EscapeDataString(text ?? "")}" +
+            $"&field={Uri.EscapeDataString(field ?? "all")}" +
             $"&page={page}&pageSize={pageSize}";
 
         var Result = await httpClient

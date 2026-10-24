@@ -6,7 +6,7 @@ namespace NorthWind.Sales.Backend.BusinessObjects.Interfaces.Search;
 public interface ISearchOrdersInputPort
 {
     Task<PagedResultDto<OrderSearchItemDto>> Handle(
-        string text, int page, int pageSize);
+        string text, string field, int page, int pageSize);
 }
 
 public interface IGetInvoiceInputPort

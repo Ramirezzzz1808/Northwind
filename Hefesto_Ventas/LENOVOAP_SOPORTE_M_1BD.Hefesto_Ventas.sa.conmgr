@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="LENOVOAP_SOPORTE_M_1BD.Hefesto_Ventas.sa"
+  DTS:DTSID="{F15D4499-450F-4644-ACC7-BF9CDEC75F0B}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=LENOVOAP\SOPORTE_M_1BD;User ID=sa;Initial Catalog=Hefesto_Ventas;Provider=MSOLEDBSQL.1;Application Name=SSIS-Hefesto_Ventas-{F15D4499-450F-4644-ACC7-BF9CDEC75F0B}LENOVOAP\SOPORTE_M_1BD.Hefesto_Ventas.sa;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAPP4HCDtx8E2oBrkfFZBEFgAAAAACAAAAAAAQZgAAAAEAACAAAAChKaJdmntUWhyK11jCNV47wGA6cIKFZROZfZzWrPd4rQAAAAAOgAAAAAIAACAAAABIIpR4M4E+lW6WWBoypa8cYkHtV4SHrOeLf/6SE6m8z4AAAAADwJAIl94ylj1SefBlNfTxaVOAWTmQ+JwCsReZJ8RE/9INTjc+dVOiaRaIZnYMeUGl+8YnSyzBtG8/3JF402NnBwDCrz4YgA+7dG3yuRWgJmUlGb2z108pn2RT1Y+pbNkMsOeUudxKxlvhWPieuL4XBkUgv45EKgFlVhcsV1MDmUAAAAAJX6tNXrfj5g3Ne3Wc+mW1CGYnJln0smI95jzXYP2/iHs4rB9ehJq3YraVlCJosAbuz0hQeq2Wmll2TzDwwC+G</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

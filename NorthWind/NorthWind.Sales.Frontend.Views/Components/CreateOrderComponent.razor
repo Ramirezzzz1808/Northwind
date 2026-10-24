@@ -169,6 +169,7 @@
     <SearchModal TItem="CustomerSearchItemDto"
                  Title="@PosMessages.CustomerSearchTitle"
                  Search="Order.SearchCustomers"
+                 Filters="SearchFilterOption.ForCustomers()"
                  OnSelected="CustomerSelected"
                  OnClose="CloseModals">
         <HeaderTemplate>
@@ -188,6 +189,7 @@
 {
     <ProductSearchModal Title="@PosMessages.ProductSearchTitle"
                         Search="Order.SearchProducts"
+                        Filters="SearchFilterOption.ForProducts()"
                         ProductsInOrder="ProductsInOrder"
                         MultiSelect="@(DetailToReplace == null)"
                         OnConfirm="ProductsConfirmed"

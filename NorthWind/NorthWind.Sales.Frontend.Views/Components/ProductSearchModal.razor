@@ -12,11 +12,25 @@
             </div>
 
             <div class="modal-body">
-                <div class="mb-3">
-                    <input type="text" class="form-control"
-                           placeholder="@PosMessages.SearchPlaceholder"
-                           value="@SearchText"
-                           @oninput="OnSearchInput" />
+                <div class="row g-2 mb-3">
+                    <div class="col-12 col-md-8">
+                        <input type="text" class="form-control"
+                               placeholder="@PosMessages.SearchPlaceholder"
+                               value="@SearchText"
+                               @oninput="OnSearchInput" />
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <select class="form-select"
+                                aria-label="@SearchFilterMessages.FilterLabel"
+                                title="@SearchFilterMessages.FilterLabel"
+                                @bind="SelectedField"
+                                @bind:after="OnFilterChanged">
+                            @foreach (var Option in Filters)
+                            {
+                                <option value="@Option.Key">@Option.Label</option>
+                            }
+                        </select>
+                    </div>
                 </div>
 
                 @if (!string.IsNullOrEmpty(Error))
@@ -144,7 +158,11 @@
     public string Title { get; set; } = "";
 
     [Parameter, EditorRequired]
-    public Func<string, int, int, Task<PagedResultDto<ProductSearchItemDto>>> Search { get; set; } = default!;
+    public Func<string, string, int, int, Task<PagedResultDto<ProductSearchItemDto>>> Search { get; set; } = default!;
+
+    // Opciones del filtro "Buscar en". Por defecto solo "Todos los campos".
+    [Parameter]
+    public List<SearchFilterOption> Filters { get; set; } = [SearchFilterOption.All];
 
     // Productos que ya están en la venta: se muestran "Seleccionado" y bloqueados.
     [Parameter]
@@ -162,6 +180,7 @@
     public EventCallback OnClose { get; set; }
 
     string SearchText = "";
+    string SelectedField = SearchFilterOption.All.Key;
     string? Error;
     bool IsLoading;
     int CurrentPage = 1;
@@ -226,6 +245,13 @@
         await LoadPage(1);
     }
 
+    // Al cambiar el filtro se consulta de inmediato, sin esperar el temporizador.
+    async Task OnFilterChanged()
+    {
+        DebounceCts?.Cancel();
+        await LoadPage(1);
+    }
+
     async Task LoadPage(int page)
     {
         int ThisRequest = ++RequestId;
@@ -233,7 +259,7 @@
         Error = null;
         try
         {
-            var NewResult = await Search(SearchText?.Trim() ?? "", page, PageSize);
+            var NewResult = await Search(SearchText?.Trim() ?? "", SelectedField, page, PageSize);
 
             // Si llegó una búsqueda más nueva, se descarta esta respuesta.
             if (ThisRequest != RequestId)
